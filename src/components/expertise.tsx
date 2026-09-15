@@ -11,45 +11,38 @@ export function Expertise() {
           description="Complementary areas of work — engaged together on a programme, or on their own for a focused piece of advice or delivery."
         />
 
-        <div className="mt-16 divide-y divide-line border-t border-line">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
               id={pillar.id}
-              className="group relative grid scroll-mt-24 grid-cols-1 gap-6 py-12 pl-0 transition-[padding] duration-300 hover:pl-6 lg:grid-cols-[minmax(0,220px)_1fr] lg:gap-12"
+              className="scroll-mt-24 rounded-2xl border border-line bg-paper p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_20px_40px_-24px_rgba(30,58,138,0.35)]"
             >
-              <span
-                aria-hidden
-                className="absolute top-0 left-0 h-full w-0.5 origin-top scale-y-0 bg-blue transition-transform duration-300 ease-out group-hover:scale-y-100"
-              />
-              <div>
-                <span className="font-display text-sm text-ink-faint transition-colors duration-300 group-hover:text-blue">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-soft">
+                <span className="font-display text-lg font-medium text-blue">
                   {pillar.kicker}
                 </span>
-                <h3 className="font-display mt-2 text-2xl font-medium text-ink">
-                  {pillar.name}
-                </h3>
               </div>
-
-              <div className="max-w-2xl">
-                <p className="text-lg leading-relaxed text-ink-soft">
-                  {pillar.description}
-                </p>
-                <ul className="mt-6 space-y-2.5">
-                  {pillar.examples.map((example) => (
-                    <li
-                      key={example}
-                      className="flex gap-3 text-sm leading-relaxed text-ink-soft"
-                    >
-                      <span
-                        aria-hidden
-                        className="mt-2 h-1.5 w-1.5 flex-shrink-0 bg-blue"
-                      />
-                      {example}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h3 className="font-display mt-5 text-xl font-medium text-ink">
+                {pillar.name}
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-ink-soft">
+                {pillar.description}
+              </p>
+              <ul className="mt-5 space-y-2.5">
+                {pillar.examples.map((example) => (
+                  <li
+                    key={example}
+                    className="flex gap-2.5 text-sm leading-relaxed text-ink-soft"
+                  >
+                    <span
+                      aria-hidden
+                      className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-blue"
+                    />
+                    {example}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
