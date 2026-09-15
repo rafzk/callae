@@ -20,7 +20,6 @@ export const siteConfig = {
 export type HeroStat = {
   value: string;
   countTo?: number;
-  prefix?: string;
   suffix?: string;
   label: string;
 };
@@ -129,7 +128,7 @@ export const founder = {
     "Specialising in Integrated Risk Management and GRC since 2019",
     "Multi-year ServiceNow MVP",
   ],
-  bio: "Rafael founded CALLAE to bring senior, hands-on expertise to governance and ServiceNow engagements from day one. His background spans enterprise programmes, technical leadership, solution architecture and hands-on implementation — with a particular focus on governance, risk and compliance on the ServiceNow platform.",
+  bio: "Rafael founded CALLAE to bring senior, hands-on expertise to governance and ServiceNow engagements from day one. His background spans enterprise programmes, technical leadership, solution architecture and implementation — with a particular focus on governance, risk and compliance on the ServiceNow platform.",
 };
 
 export type ExperienceItem = {
