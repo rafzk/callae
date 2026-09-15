@@ -36,7 +36,7 @@ export default function Image() {
               width: 36,
               height: 12,
               marginLeft: 6,
-              backgroundColor: "#2952E3",
+              backgroundColor: "#1E3A8A",
             }}
           />
         </div>
