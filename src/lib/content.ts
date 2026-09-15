@@ -34,7 +34,7 @@ export const heroStats: HeroStat[] = [
 
 export const navLinks = [
   { label: "Advisory", href: "#advisory" },
-  { label: "Digital", href: "#digital" },
+  { label: "Hands-on", href: "#hands-on" },
   { label: "Labs", href: "#labs" },
   { label: "About", href: "#about" },
 ] as const;
@@ -62,11 +62,11 @@ export const pillars: Pillar[] = [
     ],
   },
   {
-    id: "digital",
-    name: "Digital",
+    id: "hands-on",
+    name: "Hands-on",
     kicker: "02",
     description:
-      "Hands-on ServiceNow delivery, from workflow design to integration — built to be maintained by your team, not just handed over.",
+      "ServiceNow delivery, from workflow design to integration — built to be maintained by your team, not just handed over.",
     examples: [
       "Integrated Risk Management implementation and configuration",
       "Workflow design and process automation across GRC and ITSM",
