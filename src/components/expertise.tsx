@@ -16,10 +16,14 @@ export function Expertise() {
             <div
               key={pillar.id}
               id={pillar.id}
-              className="grid scroll-mt-24 grid-cols-1 gap-6 py-12 lg:grid-cols-[minmax(0,220px)_1fr] lg:gap-12"
+              className="group relative grid scroll-mt-24 grid-cols-1 gap-6 py-12 pl-0 transition-[padding] duration-300 hover:pl-6 lg:grid-cols-[minmax(0,220px)_1fr] lg:gap-12"
             >
+              <span
+                aria-hidden
+                className="absolute top-0 left-0 h-full w-0.5 origin-top scale-y-0 bg-green transition-transform duration-300 ease-out group-hover:scale-y-100"
+              />
               <div>
-                <span className="font-display text-sm text-ink-faint">
+                <span className="font-display text-sm text-ink-faint transition-colors duration-300 group-hover:text-green">
                   {pillar.kicker}
                 </span>
                 <h3 className="font-display mt-2 text-2xl font-medium text-ink">

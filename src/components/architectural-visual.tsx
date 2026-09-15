@@ -1,14 +1,15 @@
 const strata = [
-  { y: 40, width: 1, opacity: 0.16 },
-  { y: 96, width: 0.86, opacity: 0.14 },
-  { y: 152, width: 0.72, opacity: 0.12 },
+  { y: 32, width: 1, opacity: 0.16 },
+  { y: 84, width: 0.88, opacity: 0.14 },
+  { y: 136, width: 0.74, opacity: 0.12 },
+  { y: 188, width: 0.6, opacity: 0.1 },
 ];
 
 const blocks = [
-  { x: 60, y: 372, width: 400, height: 34 },
-  { x: 100, y: 320, width: 320, height: 34 },
-  { x: 140, y: 268, width: 240, height: 34 },
-  { x: 182, y: 216, width: 156, height: 34 },
+  { x: 50, y: 372, width: 420, height: 36 },
+  { x: 92, y: 318, width: 336, height: 36 },
+  { x: 136, y: 264, width: 248, height: 36 },
+  { x: 180, y: 210, width: 160, height: 36 },
 ];
 
 export function ArchitecturalVisual() {
@@ -17,14 +18,14 @@ export function ArchitecturalVisual() {
       viewBox="0 0 520 460"
       role="img"
       aria-label="Abstract illustration of stacked geometric forms narrowing upward, suggesting a structure built on solid foundations"
-      className="h-auto w-full max-w-md text-ink"
+      className="h-auto w-full max-w-lg text-ink sm:max-w-xl"
     >
       <g stroke="currentColor" strokeOpacity="0.5" strokeWidth="1">
         {strata.map((line, i) => (
           <line
             key={line.y}
-            x1={260 - (260 * line.width)}
-            x2={260 + (260 * line.width)}
+            x1={260 - 260 * line.width}
+            x2={260 + 260 * line.width}
             y1={line.y}
             y2={line.y}
             pathLength={1}
@@ -41,9 +42,9 @@ export function ArchitecturalVisual() {
 
       <line
         x1="260"
-        y1="30"
+        y1="22"
         x2="260"
-        y2="216"
+        y2="210"
         stroke="var(--color-green)"
         strokeWidth="1.5"
         pathLength={1}
@@ -51,17 +52,36 @@ export function ArchitecturalVisual() {
         strokeDashoffset={1}
         style={{ animation: "arch-draw 0.9s ease-out forwards", animationDelay: "0.4s" }}
       />
-      <circle
-        cx="260"
-        cy="26"
-        r="4"
-        fill="var(--color-green)"
-        style={{
-          animation: "arch-fade-in 0.5s ease-out forwards",
-          animationDelay: "1.2s",
-          opacity: 0,
-        }}
-      />
+
+      <g
+        className="arch-float"
+        style={{ transformBox: "fill-box", transformOrigin: "center", animationDelay: "1.4s" }}
+      >
+        <circle
+          cx="260"
+          cy="18"
+          r="10"
+          fill="none"
+          stroke="var(--color-green)"
+          strokeOpacity="0.35"
+          style={{
+            animation: "arch-fade-in 0.6s ease-out forwards",
+            animationDelay: "1.2s",
+            opacity: 0,
+          }}
+        />
+        <circle
+          cx="260"
+          cy="18"
+          r="4.5"
+          fill="var(--color-green)"
+          style={{
+            animation: "arch-fade-in 0.5s ease-out forwards",
+            animationDelay: "1.2s",
+            opacity: 0,
+          }}
+        />
+      </g>
 
       {blocks.map((block, i) => (
         <g
@@ -87,12 +107,12 @@ export function ArchitecturalVisual() {
       ))}
 
       <rect
-        x="20"
+        x="10"
         y="406"
-        width="480"
-        height="1"
+        width="500"
+        height="1.5"
         fill="var(--color-ink)"
-        fillOpacity="0.25"
+        fillOpacity="0.28"
       />
     </svg>
   );

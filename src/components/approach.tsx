@@ -11,16 +11,22 @@ export function Approach() {
           description="Hands-on, senior expertise from first conversation to handover — with the aim of leaving your team more capable than we found it."
         />
 
-        <ol className="mt-16 grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2">
+        <ol className="mt-16 grid grid-cols-1 gap-x-10 gap-y-14 sm:grid-cols-2">
           {approachSteps.map((item) => (
-            <li key={item.step} className="border-t border-line pt-6">
-              <span className="font-display text-sm text-ink-faint">
+            <li key={item.step} className="relative border-t border-line pt-6">
+              <span
+                aria-hidden
+                className="font-display pointer-events-none absolute -top-2 right-0 text-7xl font-medium text-ink/5 sm:text-8xl"
+              >
+                {item.step}
+              </span>
+              <span className="text-sm font-medium text-green">
                 {item.step}
               </span>
               <h3 className="font-display mt-2 text-xl font-medium text-ink">
                 {item.title}
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-ink-soft">
+              <p className="mt-3 max-w-sm text-base leading-relaxed text-ink-soft">
                 {item.description}
               </p>
             </li>

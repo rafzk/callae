@@ -17,6 +17,21 @@ export const siteConfig = {
   web3FormsAccessKey: "",
 } as const;
 
+export type HeroStat = {
+  value: string;
+  countTo?: number;
+  prefix?: string;
+  suffix?: string;
+  label: string;
+};
+
+export const heroStats: HeroStat[] = [
+  { value: "10+", countTo: 10, suffix: "+", label: "Years in IT" },
+  { value: "2015", countTo: 2015, label: "ServiceNow since" },
+  { value: "2019", countTo: 2019, label: "IRM & GRC specialism since" },
+  { value: "MVP", label: "Multi-year ServiceNow MVP" },
+];
+
 export const navLinks = [
   { label: "Advisory", href: "#advisory" },
   { label: "Digital", href: "#digital" },

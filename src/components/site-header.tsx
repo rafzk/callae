@@ -6,6 +6,7 @@ import { Wordmark } from "./wordmark";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (!open) return;
@@ -22,8 +23,21 @@ export function SiteHeader() {
     };
   }, [open]);
 
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
+    <header
+      className={`sticky top-0 z-50 border-b bg-paper/90 backdrop-blur transition-shadow duration-300 ${
+        scrolled ? "border-line shadow-[0_8px_24px_-16px_rgba(31,35,32,0.35)]" : "border-transparent"
+      }`}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
         <a
           href="#top"
@@ -42,14 +56,14 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink-soft transition-colors hover:text-ink"
+              className="link-underline text-sm font-medium text-ink-soft transition-colors hover:text-ink"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-green"
+            className="btn-lift inline-flex items-center rounded-full bg-green px-5 py-2.5 text-sm font-medium text-paper"
           >
             Let&rsquo;s talk
           </a>
@@ -106,7 +120,7 @@ export function SiteHeader() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper"
+            className="mt-2 inline-flex items-center justify-center rounded-full bg-green px-5 py-3 text-sm font-medium text-paper"
           >
             Let&rsquo;s talk
           </a>

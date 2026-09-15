@@ -5,6 +5,7 @@ import { Experience } from "@/components/experience";
 import { Expertise } from "@/components/expertise";
 import { Hero } from "@/components/hero";
 import { Perspective } from "@/components/perspective";
+import { Reveal } from "@/components/reveal";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -14,12 +15,24 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
-        <Expertise />
-        <Approach />
-        <About />
-        <Experience />
-        <Perspective />
-        <Contact />
+        <Reveal>
+          <Expertise />
+        </Reveal>
+        <Reveal>
+          <Approach />
+        </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Experience />
+        </Reveal>
+        <Reveal>
+          <Perspective />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <SiteFooter />
     </>
