@@ -34,7 +34,7 @@ export const heroStats: HeroStat[] = [
 
 export const navLinks = [
   { label: "Advisory", href: "#advisory" },
-  { label: "Hands-on", href: "#hands-on" },
+  { label: "Delivery", href: "#delivery" },
   { label: "Labs", href: "#labs" },
   { label: "About", href: "#about" },
 ] as const;
@@ -62,8 +62,8 @@ export const pillars: Pillar[] = [
     ],
   },
   {
-    id: "hands-on",
-    name: "Hands-on",
+    id: "delivery",
+    name: "Delivery",
     kicker: "02",
     description:
       "ServiceNow delivery, from workflow design to integration — built to be maintained by your team, not just handed over.",
