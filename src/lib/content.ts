@@ -130,6 +130,26 @@ export const founder = {
   bio: "Rafael founded CALLAE to bring senior, hands-on expertise to governance and ServiceNow engagements from day one. His background spans enterprise programmes, technical leadership, solution architecture and implementation — with a particular focus on governance, risk and compliance on the ServiceNow platform.",
 };
 
+export type ClientLogo = {
+  name: string;
+  logoSrc: string;
+};
+
+// Empty until a real client agrees to be named and their logo file is added
+// under public/logos/. Never add a placeholder or invented company here —
+// the component that reads this renders nothing while it's empty.
+export const clientLogos: ClientLogo[] = [];
+
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+};
+
+// Empty until there's a real client quote, given with permission. Never
+// invent a quote, a name or a role.
+export const testimonials: Testimonial[] = [];
+
 export type Recognition = {
   name: string;
   description: string;

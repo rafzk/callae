@@ -1,5 +1,6 @@
 import { About } from "@/components/about";
 import { Approach } from "@/components/approach";
+import { ClientLogos } from "@/components/client-logos";
 import { Contact } from "@/components/contact";
 import { Experience } from "@/components/experience";
 import { Expertise } from "@/components/expertise";
@@ -9,6 +10,7 @@ import { Reveal } from "@/components/reveal";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StatStrip } from "@/components/stat-strip";
+import { Testimonials } from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -22,6 +24,9 @@ export default function Home() {
           </div>
         </Reveal>
         <Reveal>
+          <ClientLogos />
+        </Reveal>
+        <Reveal>
           <Expertise />
         </Reveal>
         <Reveal>
@@ -32,6 +37,9 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <Experience />
+        </Reveal>
+        <Reveal>
+          <Testimonials />
         </Reveal>
         <Reveal>
           <Perspective />

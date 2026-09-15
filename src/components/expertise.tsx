@@ -1,5 +1,12 @@
 import { pillars } from "@/lib/content";
+import { AdvisoryIcon, DeliveryIcon, LabsIcon } from "./pillar-icons";
 import { SectionHeading } from "./section-heading";
+
+const icons = {
+  advisory: AdvisoryIcon,
+  delivery: DeliveryIcon,
+  labs: LabsIcon,
+} as const;
 
 export function Expertise() {
   return (
@@ -12,14 +19,19 @@ export function Expertise() {
         />
 
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {pillars.map((pillar) => (
+          {pillars.map((pillar) => {
+            const Icon = icons[pillar.id as keyof typeof icons];
+            return (
             <div
               key={pillar.id}
               id={pillar.id}
               className="scroll-mt-24 rounded-2xl border border-line bg-paper p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_20px_40px_-24px_rgba(30,58,138,0.35)]"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-soft">
-                <span className="font-display text-lg font-medium text-blue">
+              <div className="flex items-center justify-between">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-soft">
+                  {Icon ? <Icon className="h-5 w-5 text-blue" /> : null}
+                </div>
+                <span className="font-display text-sm text-ink-faint">
                   {pillar.kicker}
                 </span>
               </div>
@@ -44,7 +56,8 @@ export function Expertise() {
                 ))}
               </ul>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
