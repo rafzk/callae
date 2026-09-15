@@ -8,6 +8,12 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // The hero is the only dark section and always sits at the top of the
+  // page, so "not scrolled yet" reliably means "still over the dark hero" —
+  // that's what lets the header go transparent/light there and solid once
+  // past it, without tracking the hero's position separately.
+  const solid = scrolled || open;
+
   useEffect(() => {
     if (!open) return;
 
@@ -34,18 +40,20 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b bg-paper/90 backdrop-blur transition-shadow duration-300 ${
-        scrolled ? "border-line shadow-[0_8px_24px_-16px_rgba(16,25,43,0.35)]" : "border-transparent"
+      className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur transition-[background-color,box-shadow,border-color] duration-300 ${
+        solid
+          ? "border-line bg-paper/90 shadow-[0_8px_24px_-16px_rgba(16,25,43,0.35)]"
+          : "border-transparent bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
         <a
           href="#top"
-          className="rounded-sm"
+          className={`rounded-sm ${solid ? "" : "text-white"}`}
           onClick={() => setOpen(false)}
           aria-label={`${"CALLAE"} — back to top`}
         >
-          <Wordmark />
+          <Wordmark underlineClassName={solid ? "bg-blue" : "bg-white/70"} />
         </a>
 
         <nav
@@ -56,14 +64,20 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="link-underline text-sm font-medium text-ink-soft transition-colors hover:text-ink"
+              className={`link-underline text-sm font-medium transition-colors ${
+                solid
+                  ? "text-ink-soft hover:text-ink"
+                  : "text-white/85 hover:text-white"
+              }`}
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="btn-lift inline-flex items-center rounded-full bg-blue px-5 py-2.5 text-sm font-medium text-paper"
+            className={`btn-lift inline-flex items-center rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
+              solid ? "bg-blue text-paper" : "bg-paper text-blue-deep"
+            }`}
           >
             Let&rsquo;s talk
           </a>
@@ -71,7 +85,9 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink md:hidden"
+          className={`inline-flex h-10 w-10 items-center justify-center rounded-full border md:hidden ${
+            solid ? "border-line text-ink" : "border-white/40 text-white"
+          }`}
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -79,19 +95,19 @@ export function SiteHeader() {
         >
           <span className="relative block h-3.5 w-4.5" aria-hidden>
             <span
-              className={`absolute left-0 top-0 h-px w-4.5 bg-ink transition-transform ${
-                open ? "translate-y-[7px] rotate-45" : ""
-              }`}
+              className={`absolute left-0 top-0 h-px w-4.5 transition-transform ${
+                solid ? "bg-ink" : "bg-white"
+              } ${open ? "translate-y-[7px] rotate-45" : ""}`}
             />
             <span
-              className={`absolute left-0 top-1.5 h-px w-4.5 bg-ink transition-opacity ${
-                open ? "opacity-0" : "opacity-100"
-              }`}
+              className={`absolute left-0 top-1.5 h-px w-4.5 transition-opacity ${
+                solid ? "bg-ink" : "bg-white"
+              } ${open ? "opacity-0" : "opacity-100"}`}
             />
             <span
-              className={`absolute left-0 top-3 h-px w-4.5 bg-ink transition-transform ${
-                open ? "-translate-y-[7px] -rotate-45" : ""
-              }`}
+              className={`absolute left-0 top-3 h-px w-4.5 transition-transform ${
+                solid ? "bg-ink" : "bg-white"
+              } ${open ? "-translate-y-[7px] -rotate-45" : ""}`}
             />
           </span>
         </button>

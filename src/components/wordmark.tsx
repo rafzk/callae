@@ -1,4 +1,10 @@
-export function Wordmark({ className = "" }: { className?: string }) {
+export function Wordmark({
+  className = "",
+  underlineClassName = "bg-blue",
+}: {
+  className?: string;
+  underlineClassName?: string;
+}) {
   return (
     <span
       className={`inline-flex flex-col leading-none select-none ${className}`}
@@ -8,7 +14,7 @@ export function Wordmark({ className = "" }: { className?: string }) {
       </span>
       <span
         aria-hidden
-        className="mt-1.5 h-[3px] w-[68%] bg-blue"
+        className={`mt-1.5 h-[3px] w-[68%] ${underlineClassName}`}
       />
     </span>
   );
