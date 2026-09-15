@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: "We build the foundations for what comes next.",
   supportingLine: "Govern with confidence. Transform with purpose.",
   description:
-    "CALLAE is an independent consultancy specialising in governance, ServiceNow and digital transformation. We help organisations strengthen governance, improve digital operations and build the foundations for responsible AI adoption.",
+    "CALLAE is a consultancy specialising in governance, ServiceNow and digital transformation. We help organisations strengthen governance, improve digital operations and build the foundations for responsible AI adoption.",
   // Contact details are intentionally configurable in one place rather than
   // hard-coded across the site. Update before launch.
   email: "hello@callae.eu",
@@ -129,7 +129,7 @@ export const founder = {
     "Specialising in Integrated Risk Management and GRC since 2019",
     "Multi-year ServiceNow MVP",
   ],
-  bio: "Rafael founded CALLAE to offer organisations the kind of senior, independent expertise that's often diluted in larger delivery teams. His background spans enterprise programmes, technical leadership, solution architecture and hands-on implementation — with a particular focus on governance, risk and compliance on the ServiceNow platform.",
+  bio: "Rafael founded CALLAE to bring senior, hands-on expertise to governance and ServiceNow engagements from day one. His background spans enterprise programmes, technical leadership, solution architecture and hands-on implementation — with a particular focus on governance, risk and compliance on the ServiceNow platform.",
 };
 
 export type ExperienceItem = {

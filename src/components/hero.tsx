@@ -30,7 +30,7 @@ export function Hero() {
             what comes next.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
-            CALLAE is an independent consultancy bringing senior governance
+            CALLAE is a consultancy bringing senior governance
             expertise and hands-on ServiceNow delivery together. We help
             organisations strengthen how they govern, run their digital
             operations, and prepare, deliberately, for automation and AI.

@@ -5,7 +5,7 @@ export function About() {
   return (
     <section id="about" className="scroll-mt-24 border-b border-line bg-paper">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28">
-        <SectionHeading eyebrow="About" title="An independent consultancy" />
+        <SectionHeading eyebrow="About" title="About CALLAE" />
 
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,220px)_1fr] lg:gap-12">
           <div className="flex items-start gap-5 lg:flex-col lg:gap-6">
