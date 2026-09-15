@@ -8,6 +8,7 @@ import { Perspective } from "@/components/perspective";
 import { Reveal } from "@/components/reveal";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { StatStrip } from "@/components/stat-strip";
 
 export default function Home() {
   return (
@@ -15,6 +16,11 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
+        <Reveal className="border-b border-line bg-paper">
+          <div className="mx-auto max-w-4xl px-6 py-14 sm:px-8">
+            <StatStrip align="center" bordered={false} />
+          </div>
+        </Reveal>
         <Reveal>
           <Expertise />
         </Reveal>

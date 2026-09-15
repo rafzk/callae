@@ -44,11 +44,12 @@ function Stat({
   value,
   label,
   active,
-}: (typeof heroStats)[number] & { active: boolean }) {
+  align,
+}: (typeof heroStats)[number] & { active: boolean; align: "left" | "center" }) {
   const count = useCountUp(countTo, active);
 
   return (
-    <div>
+    <div className={align === "center" ? "text-center" : undefined}>
       <p className="font-display text-3xl font-medium text-ink sm:text-4xl">
         {countTo !== undefined ? `${count}${suffix ?? ""}` : value}
       </p>
@@ -57,7 +58,13 @@ function Stat({
   );
 }
 
-export function StatStrip() {
+export function StatStrip({
+  align = "left",
+  bordered = true,
+}: {
+  align?: "left" | "center";
+  bordered?: boolean;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(
     () => typeof IntersectionObserver === "undefined"
@@ -85,10 +92,12 @@ export function StatStrip() {
   return (
     <div
       ref={ref}
-      className="grid grid-cols-2 gap-x-6 gap-y-8 border-t border-line pt-8 sm:grid-cols-4"
+      className={`grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4 ${
+        bordered ? "border-t border-line pt-8" : ""
+      }`}
     >
       {heroStats.map((stat) => (
-        <Stat key={stat.label} {...stat} active={active} />
+        <Stat key={stat.label} {...stat} active={active} align={align} />
       ))}
     </div>
   );

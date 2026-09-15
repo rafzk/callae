@@ -12,13 +12,17 @@ const blocks = [
   { x: 180, y: 210, width: 160, height: 36 },
 ];
 
-export function ArchitecturalVisual() {
+export function ArchitecturalVisual({
+  className = "h-auto w-full max-w-lg text-ink sm:max-w-xl",
+}: {
+  className?: string;
+}) {
   return (
     <svg
       viewBox="0 0 520 460"
       role="img"
       aria-label="Abstract illustration of stacked geometric forms narrowing upward, suggesting a structure built on solid foundations"
-      className="h-auto w-full max-w-lg text-ink sm:max-w-xl"
+      className={className}
     >
       <g stroke="currentColor" strokeOpacity="0.5" strokeWidth="1">
         {strata.map((line, i) => (
