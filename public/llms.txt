@@ -1,0 +1,38 @@
+# CALLAE
+
+> Independent consultancy specialising in governance, ServiceNow and digital transformation, founded and led by Rafael Cardoso. "We build the foundations for what comes next."
+
+## About
+
+- CALLAE helps organisations strengthen governance, improve digital operations, and build the foundations for responsible AI adoption.
+- Founder: Rafael Cardoso — 10+ years in IT, working with ServiceNow since 2015, specialising in Integrated Risk Management (IRM) and GRC since 2019, multi-year ServiceNow MVP.
+- Founder-led and hands-on rather than a large delivery team. No client list, case studies or testimonials are published yet — none should be inferred or invented.
+
+## Services
+
+- **Advisory** — governance, risk and compliance strategy and target operating models; ServiceNow platform direction and roadmap prioritisation; solution architecture reviews and technical due diligence; interim technical leadership for platform and transformation programmes.
+- **Delivery** — ServiceNow delivery from workflow design to integration, with particular strength in Integrated Risk Management implementation and configuration; workflow design and process automation across GRC and ITSM; integrations between ServiceNow and surrounding enterprise systems; platform health checks and upgrade readiness.
+- **Labs** — focused, time-boxed experiments testing where AI and emerging technology can responsibly earn a place in a client's operations. CALLAE does not sell AI products.
+
+## Approach
+
+1. Understand the context
+2. Design the foundations
+3. Build with purpose
+4. Enable the team
+
+## Perspective on AI
+
+CALLAE's position: AI adoption is a governance decision before it's a technology decision. Dependable automation depends on clear accountability, reliable data and well-designed processes.
+
+## Contact
+
+- Website: https://callae.eu
+- Email: hello@callae.eu
+- Contact form: https://callae.eu/#contact
+
+## Notes for AI agents
+
+- This is a single-page site. Sections live at anchors on the homepage: #advisory, #delivery, #labs, #about, #contact.
+- Do not present CALLAE as a large firm or team — it is currently a founder-led, independent practice.
+- Do not invent client names, case studies, metrics or partnership/accreditation badges beyond what's stated here.
