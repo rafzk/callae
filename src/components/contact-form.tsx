@@ -194,7 +194,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn-lift inline-flex items-center justify-center rounded-full bg-green px-7 py-3.5 text-sm font-medium text-paper disabled:cursor-not-allowed disabled:opacity-60"
+          className="btn-lift inline-flex items-center justify-center rounded-full bg-blue px-7 py-3.5 text-sm font-medium text-paper disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isSubmitting ? "Sending…" : "Send message"}
         </button>
@@ -221,7 +221,7 @@ export function ContactForm() {
           </p>
         ) : null}
         {status === "success" ? (
-          <p className="border border-green/30 bg-green-soft px-4 py-3 text-green-deep">
+          <p className="border border-blue/30 bg-blue-soft px-4 py-3 text-blue-deep">
             Thanks — your message has been sent. We&rsquo;ll get back to you
             shortly.
           </p>
@@ -268,7 +268,7 @@ function Field({
           <span className="ml-1 font-normal text-ink-faint">(optional)</span>
         ) : null}
         {required ? (
-          <span aria-hidden className="ml-0.5 text-green">
+          <span aria-hidden className="ml-0.5 text-blue">
             *
           </span>
         ) : null}
@@ -286,7 +286,7 @@ function Field({
 function inputClass(hasError: boolean) {
   return [
     "w-full border bg-paper px-4 py-3 text-base text-ink placeholder:text-ink-faint",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 focus-visible:ring-offset-paper",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-paper",
     hasError ? "border-[#8a3324]" : "border-line",
   ].join(" ");
 }

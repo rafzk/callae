@@ -20,7 +20,7 @@ export function Approach() {
               >
                 {item.step}
               </span>
-              <span className="text-sm font-medium text-green">
+              <span className="text-sm font-medium text-blue">
                 {item.step}
               </span>
               <h3 className="font-display mt-2 text-xl font-medium text-ink">

@@ -35,7 +35,7 @@ export function About() {
                 >
                   <span
                     aria-hidden
-                    className="mt-2 h-1.5 w-1.5 flex-shrink-0 bg-green"
+                    className="mt-2 h-1.5 w-1.5 flex-shrink-0 bg-blue"
                   />
                   {fact}
                 </li>

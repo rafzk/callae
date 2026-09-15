@@ -45,7 +45,7 @@ export function ArchitecturalVisual() {
         y1="22"
         x2="260"
         y2="210"
-        stroke="var(--color-green)"
+        stroke="var(--color-blue)"
         strokeWidth="1.5"
         pathLength={1}
         strokeDasharray={1}
@@ -62,7 +62,7 @@ export function ArchitecturalVisual() {
           cy="18"
           r="10"
           fill="none"
-          stroke="var(--color-green)"
+          stroke="var(--color-blue)"
           strokeOpacity="0.35"
           style={{
             animation: "arch-fade-in 0.6s ease-out forwards",
@@ -74,7 +74,7 @@ export function ArchitecturalVisual() {
           cx="260"
           cy="18"
           r="4.5"
-          fill="var(--color-green)"
+          fill="var(--color-blue)"
           style={{
             animation: "arch-fade-in 0.5s ease-out forwards",
             animationDelay: "1.2s",
@@ -99,7 +99,7 @@ export function ArchitecturalVisual() {
             y={block.y}
             width={block.width}
             height={block.height}
-            fill={i === blocks.length - 1 ? "var(--color-green)" : "var(--color-paper-deep)"}
+            fill={i === blocks.length - 1 ? "var(--color-blue)" : "var(--color-paper-deep)"}
             stroke="var(--color-ink)"
             strokeOpacity="0.65"
           />

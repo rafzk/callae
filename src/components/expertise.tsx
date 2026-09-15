@@ -20,10 +20,10 @@ export function Expertise() {
             >
               <span
                 aria-hidden
-                className="absolute top-0 left-0 h-full w-0.5 origin-top scale-y-0 bg-green transition-transform duration-300 ease-out group-hover:scale-y-100"
+                className="absolute top-0 left-0 h-full w-0.5 origin-top scale-y-0 bg-blue transition-transform duration-300 ease-out group-hover:scale-y-100"
               />
               <div>
-                <span className="font-display text-sm text-ink-faint transition-colors duration-300 group-hover:text-green">
+                <span className="font-display text-sm text-ink-faint transition-colors duration-300 group-hover:text-blue">
                   {pillar.kicker}
                 </span>
                 <h3 className="font-display mt-2 text-2xl font-medium text-ink">
@@ -43,7 +43,7 @@ export function Expertise() {
                     >
                       <span
                         aria-hidden
-                        className="mt-2 h-1.5 w-1.5 flex-shrink-0 bg-green"
+                        className="mt-2 h-1.5 w-1.5 flex-shrink-0 bg-blue"
                       />
                       {example}
                     </li>

@@ -8,7 +8,7 @@ export function Wordmark({ className = "" }: { className?: string }) {
       </span>
       <span
         aria-hidden
-        className="mt-1.5 h-[3px] w-[68%] bg-green"
+        className="mt-1.5 h-[3px] w-[68%] bg-blue"
       />
     </span>
   );

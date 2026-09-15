@@ -2,7 +2,7 @@ import { perspective } from "@/lib/content";
 
 export function Perspective() {
   return (
-    <section className="border-b border-line-deep bg-green-deep text-paper">
+    <section className="border-b border-line-deep bg-blue-deep text-paper">
       <div className="mx-auto max-w-4xl px-6 py-20 sm:px-8 sm:py-28">
         <p className="text-sm font-medium uppercase tracking-[0.18em] text-paper/60">
           Perspective
