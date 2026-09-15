@@ -1,4 +1,4 @@
-import { founder } from "@/lib/content";
+import { founder, recognitions } from "@/lib/content";
 import { SectionHeading } from "./section-heading";
 
 export function About() {
@@ -37,6 +37,28 @@ export function About() {
               </li>
             ))}
           </ul>
+
+          {recognitions.length > 0 ? (
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 border-t border-line pt-8">
+              {recognitions.map((item) => (
+                <div
+                  key={item.name}
+                  className="flex max-w-xs flex-col items-start gap-1.5 rounded-xl border border-line bg-paper-deep px-5 py-4 text-left sm:max-w-none sm:flex-row sm:items-center sm:gap-3"
+                >
+                  <span className="font-display shrink-0 text-sm font-medium text-blue">
+                    {item.name}
+                  </span>
+                  <span
+                    aria-hidden
+                    className="hidden h-4 w-px shrink-0 bg-line sm:block"
+                  />
+                  <span className="text-xs leading-snug text-ink-faint sm:max-w-[220px]">
+                    {item.description}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

@@ -126,10 +126,25 @@ export const founder = {
     "10+ years working in IT",
     "Working with ServiceNow since 2015",
     "Specialising in Integrated Risk Management and GRC since 2019",
-    "Multi-year ServiceNow MVP",
   ],
   bio: "Rafael founded CALLAE to bring senior, hands-on expertise to governance and ServiceNow engagements from day one. His background spans enterprise programmes, technical leadership, solution architecture and implementation — with a particular focus on governance, risk and compliance on the ServiceNow platform.",
 };
+
+export type Recognition = {
+  name: string;
+  description: string;
+};
+
+// Real, currently-held recognitions only — add to this list as new ones are
+// actually earned (e.g. a future ServiceNow partner tier). Never add a
+// badge here that isn't true yet.
+export const recognitions: Recognition[] = [
+  {
+    name: "ServiceNow MVP",
+    description:
+      "Multi-year Most Valuable Professional, ServiceNow's recognition for community contribution and platform expertise.",
+  },
+];
 
 export type ExperienceItem = {
   title: string;
