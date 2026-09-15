@@ -14,16 +14,25 @@ export function ClientLogos() {
           Trusted by
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-          {clientLogos.map((logo) => (
-            <Image
-              key={logo.name}
-              src={logo.logoSrc}
-              alt={logo.name}
-              width={140}
-              height={32}
-              className="h-8 w-auto opacity-70 grayscale"
-            />
-          ))}
+          {clientLogos.map((logo) =>
+            logo.logoSrc ? (
+              <Image
+                key={logo.name}
+                src={logo.logoSrc}
+                alt={logo.name}
+                width={140}
+                height={32}
+                className="h-8 w-auto opacity-70 grayscale"
+              />
+            ) : (
+              <span
+                key={logo.name}
+                className="font-display text-lg font-medium tracking-wide text-ink-faint"
+              >
+                {logo.name}
+              </span>
+            )
+          )}
         </div>
       </div>
     </section>

@@ -132,13 +132,15 @@ export const founder = {
 
 export type ClientLogo = {
   name: string;
-  logoSrc: string;
+  // Optional: a real logo file under public/logos/. Until one's provided,
+  // the client's name renders as a plain text wordmark instead — never a
+  // placeholder image or a guessed/scraped logo.
+  logoSrc?: string;
 };
 
-// Empty until a real client agrees to be named and their logo file is added
-// under public/logos/. Never add a placeholder or invented company here —
-// the component that reads this renders nothing while it's empty.
-export const clientLogos: ClientLogo[] = [];
+// Real, current clients only. Never add a placeholder or invented company
+// here — the component that reads this renders nothing while it's empty.
+export const clientLogos: ClientLogo[] = [{ name: "Wrangu" }];
 
 export type Testimonial = {
   quote: string;
