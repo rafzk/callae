@@ -2,6 +2,11 @@ import type { CSSProperties } from "react";
 import { ArchitecturalVisual } from "./architectural-visual";
 import { Reveal } from "./reveal";
 
+// Scopes the brand tokens to their on-dark equivalents for this section only:
+// --color-blue becomes a lighter tint of the same cobalt hue (not a second,
+// unrelated blue) so it keeps enough contrast against the gradient, and the
+// ink/line tokens flip to light so every existing utility class (text-ink,
+// border-line, etc.) works unchanged inside this subtree.
 const darkScope = {
   background: "radial-gradient(120% 90% at 50% 0%, #16234a 0%, #05070c 65%)",
   "--color-ink": "#f5f7fb",
@@ -13,14 +18,10 @@ const darkScope = {
 
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="relative overflow-hidden border-b border-line-deep"
-      style={darkScope}
-    >
-      <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-24 text-center sm:px-8 sm:py-32">
+    <section id="top" className="relative overflow-hidden" style={darkScope}>
+      <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 pt-24 pb-36 text-center sm:px-8 sm:pt-32 sm:pb-44">
         <Reveal className="flex flex-col items-center">
-          <ArchitecturalVisual className="h-auto w-full max-w-[180px] text-ink sm:max-w-[220px]" />
+          <ArchitecturalVisual className="h-auto w-full max-w-[220px] text-ink sm:max-w-[260px]" />
 
           <p className="mt-10 text-sm font-medium uppercase tracking-[0.18em] text-blue">
             Governance &middot; ServiceNow &middot; Digital transformation
@@ -51,6 +52,17 @@ export function Hero() {
           </div>
         </Reveal>
       </div>
+
+      {/* Dissolves the gradient into the page background instead of cutting
+          straight to white, so the dark hero and light content read as one
+          continuous page rather than two stitched-together sections. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-28 sm:h-36"
+        style={{
+          background: "linear-gradient(to bottom, transparent, var(--color-paper))",
+        }}
+      />
     </section>
   );
 }
