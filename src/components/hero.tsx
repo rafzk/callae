@@ -18,8 +18,12 @@ const darkScope = {
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden" style={darkScope}>
-      <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 pt-24 pb-36 text-center sm:px-8 sm:pt-32 sm:pb-44">
+    <section
+      id="top"
+      className="relative flex min-h-dvh flex-col overflow-hidden"
+      style={darkScope}
+    >
+      <div className="relative mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center px-6 py-20 text-center sm:px-8 sm:py-28">
         <Reveal className="flex flex-col items-center">
           <ArchitecturalVisual className="h-auto w-full max-w-[220px] text-ink sm:max-w-[260px]" />
 
