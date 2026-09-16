@@ -16,7 +16,7 @@ export default function Icon() {
           alignItems: "center",
           gap: 6,
           padding: "36px 30px",
-          backgroundColor: "#10192B",
+          backgroundColor: "#0A1128",
         }}
       >
         <div style={{ display: "flex", width: 108, height: 16, backgroundColor: "#FFFFFF" }} />
@@ -29,7 +29,7 @@ export default function Icon() {
             opacity: 0.78,
           }}
         />
-        <div style={{ display: "flex", width: 48, height: 16, backgroundColor: "#1E3A8A" }} />
+        <div style={{ display: "flex", width: 48, height: 16, backgroundColor: "#8AB4F8" }} />
       </div>
     ),
     { ...size }

@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --color-paper: #ffffff;
-  --color-paper-deep: #eef2f8;
-  --color-ink: #10192b;
+  --color-paper: #fafafa;
+  --color-paper-deep: #eef1f8;
+  --color-ink: #0d1526;
   --color-ink-soft: #47536b;
   --color-ink-faint: #8993a8;
-  --color-blue: #1e3a8a;
-  --color-blue-deep: #16234a;
+  --color-blue: #35509e;
+  --color-blue-deep: #0a1128;
   --color-blue-soft: #e9eefa;
+  --color-accent: #8ab4f8;
   --color-line: #dbe2ec;
-  --color-line-deep: #26314d;
+  --color-line-deep: #232d47;
 }
 
 @theme inline {
@@ -22,6 +23,7 @@
   --color-blue: var(--color-blue);
   --color-blue-deep: var(--color-blue-deep);
   --color-blue-soft: var(--color-blue-soft);
+  --color-accent: var(--color-accent);
   --color-line: var(--color-line);
   --color-line-deep: var(--color-line-deep);
   --font-display: var(--font-fraunces);
@@ -159,7 +161,7 @@ body {
 
 .btn-lift:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px -12px rgb(30 58 138 / 0.5);
+  box-shadow: 0 12px 24px -12px rgb(53 80 158 / 0.5);
 }
 
 .btn-lift:active {

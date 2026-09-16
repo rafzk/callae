@@ -25,7 +25,7 @@ export function Expertise() {
             <div
               key={pillar.id}
               id={pillar.id}
-              className="scroll-mt-24 rounded-2xl border border-line bg-paper p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_20px_40px_-24px_rgba(30,58,138,0.35)]"
+              className="scroll-mt-24 rounded-2xl border border-line bg-paper p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_20px_40px_-24px_rgba(53,80,158,0.35)]"
             >
               <div className="flex items-center justify-between">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-soft">

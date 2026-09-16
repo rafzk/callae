@@ -2,17 +2,15 @@ import type { CSSProperties } from "react";
 import { ArchitecturalVisual } from "./architectural-visual";
 import { Reveal } from "./reveal";
 
-// Scopes the brand tokens to their on-dark equivalents for this section only:
-// --color-blue becomes a lighter tint of the same cobalt hue (not a second,
-// unrelated blue) so it keeps enough contrast against the gradient, and the
-// ink/line tokens flip to light so every existing utility class (text-ink,
-// border-line, etc.) works unchanged inside this subtree.
+// Scopes the ink/line tokens to their on-dark equivalents for this section
+// only, so every existing utility class (text-ink, border-line, etc.) works
+// unchanged inside this subtree. --color-accent (periwinkle) already reads
+// fine against the dark gradient without an override.
 const darkScope = {
-  background: "radial-gradient(120% 90% at 50% 0%, #16234a 0%, #05070c 65%)",
+  background: "radial-gradient(120% 90% at 50% 0%, #0a1128 0%, #05070c 65%)",
   "--color-ink": "#f5f7fb",
   "--color-ink-soft": "#b7c0d6",
   "--color-ink-faint": "#8894b3",
-  "--color-blue": "#7c9bfa",
   "--color-line": "rgba(255, 255, 255, 0.18)",
 } as CSSProperties;
 
@@ -24,14 +22,14 @@ export function Hero() {
       style={darkScope}
     >
       {/* Soft, slowly-pulsing colour glow for atmosphere behind the
-          content — same blue as the rest of the brand, not a new hue. */}
+          content — the periwinkle accent, not a new hue. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-blue/20 blur-3xl"
+        className="pointer-events-none absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-accent/20 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full bg-blue/15 blur-3xl"
+        className="pointer-events-none absolute bottom-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full bg-accent/15 blur-3xl"
         style={{ animationDelay: "1s" }}
       />
 
@@ -39,11 +37,11 @@ export function Hero() {
         <Reveal className="flex flex-col items-center">
           <ArchitecturalVisual className="h-auto w-full max-w-[220px] text-ink sm:max-w-[260px]" />
 
-          <p className="mt-10 text-sm font-medium uppercase tracking-[0.18em] text-blue">
+          <p className="mt-10 text-sm font-medium uppercase tracking-[0.18em] text-accent">
             Governance &middot; ServiceNow &middot; Digital transformation
           </p>
           <h1 className="font-display mt-6 text-4xl leading-[1.1] font-medium tracking-tight text-ink sm:text-5xl lg:text-6xl">
-            We build the <span className="text-blue">foundations</span> for
+            We build the <span className="text-accent">foundations</span> for
             what comes next.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">

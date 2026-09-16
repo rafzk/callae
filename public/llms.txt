@@ -6,7 +6,8 @@
 
 - CALLAE helps organisations strengthen governance, improve digital operations, and build the foundations for responsible AI adoption.
 - Founder: Rafael Cardoso — 10+ years in IT, working with ServiceNow since 2015, specialising in Integrated Risk Management (IRM) and GRC since 2019, multi-year ServiceNow MVP.
-- Founder-led and hands-on rather than a large delivery team. No client list, case studies or testimonials are published yet — none should be inferred or invented.
+- Founder-led and hands-on rather than a large delivery team.
+- Current named clients: Wrangu, LambWeston. Do not infer or invent any others beyond what's listed on the site at any given time.
 
 ## Services
 

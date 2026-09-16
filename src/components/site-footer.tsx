@@ -27,12 +27,6 @@ export function SiteFooter() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              className="text-sm text-paper/75 transition-colors hover:text-paper"
-            >
-              Contact
-            </a>
           </nav>
         </div>
 

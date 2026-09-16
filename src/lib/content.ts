@@ -22,6 +22,7 @@ export const navLinks = [
   { label: "Delivery", href: "#delivery" },
   { label: "Labs", href: "#labs" },
   { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ] as const;
 
 export type Pillar = {
