@@ -25,11 +25,11 @@ export function Expertise() {
             <div
               key={pillar.id}
               id={pillar.id}
-              className="scroll-mt-24 rounded-2xl border border-line bg-paper p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_20px_40px_-24px_rgba(30,58,138,0.35)]"
+              className="scroll-mt-24 rounded-2xl border border-line bg-paper p-8 transition-all duration-300 hover:-translate-y-1 hover:border-lime/40 hover:shadow-[0_20px_40px_-24px_rgba(163,230,53,0.25)]"
             >
               <div className="flex items-center justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-soft">
-                  {Icon ? <Icon className="h-5 w-5 text-blue" /> : null}
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-lime-soft">
+                  {Icon ? <Icon className="h-5 w-5 text-lime" /> : null}
                 </div>
                 <span className="font-display text-sm text-ink-faint">
                   {pillar.kicker}
@@ -49,7 +49,7 @@ export function Expertise() {
                   >
                     <span
                       aria-hidden
-                      className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-blue"
+                      className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-lime"
                     />
                     {example}
                   </li>

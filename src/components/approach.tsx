@@ -3,7 +3,7 @@ import { SectionHeading } from "./section-heading";
 
 export function Approach() {
   return (
-    <section className="border-b border-line bg-paper-deep">
+    <section id="approach" className="scroll-mt-24 border-b border-line bg-paper-deep">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28">
         <SectionHeading
           eyebrow="How we work"
@@ -20,7 +20,7 @@ export function Approach() {
               >
                 {item.step}
               </span>
-              <span className="text-sm font-medium text-blue">
+              <span className="text-sm font-medium text-lime">
                 {item.step}
               </span>
               <h3 className="font-display mt-2 text-xl font-medium text-ink">

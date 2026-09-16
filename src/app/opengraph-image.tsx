@@ -15,37 +15,26 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          backgroundColor: "#10192B",
-          color: "#FFFFFF",
+          backgroundColor: "#060607",
+          color: "#F5F5F2",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", marginBottom: 28 }}>
-          <div style={{ width: 84, height: 12, backgroundColor: "#F6F3EC" }} />
-          <div
-            style={{
-              width: 60,
-              height: 12,
-              marginLeft: 6,
-              backgroundColor: "#F6F3EC",
-              opacity: 0.6,
-            }}
+        <svg width="64" height="64" viewBox="0 0 32 32" fill="none" style={{ marginBottom: 28 }}>
+          <path
+            d="M8 23 L16 8 L24 23"
+            stroke="#A3E635"
+            strokeWidth="4.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
-          <div
-            style={{
-              width: 36,
-              height: 12,
-              marginLeft: 6,
-              backgroundColor: "#1E3A8A",
-            }}
-          />
-        </div>
+        </svg>
         <div
           style={{
             display: "flex",
             fontSize: 30,
             letterSpacing: 10,
-            opacity: 0.85,
+            opacity: 0.75,
             marginBottom: 18,
           }}
         >
@@ -54,22 +43,12 @@ export default function Image() {
         <div
           style={{
             display: "flex",
-            fontSize: 60,
+            fontSize: 62,
             lineHeight: 1.15,
             maxWidth: 900,
           }}
         >
           {siteConfig.tagline}
-        </div>
-        <div
-          style={{
-            display: "flex",
-            fontSize: 28,
-            marginTop: 24,
-            opacity: 0.7,
-          }}
-        >
-          {siteConfig.supportingLine}
         </div>
       </div>
     ),
