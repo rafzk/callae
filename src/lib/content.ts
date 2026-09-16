@@ -2,9 +2,8 @@ export const siteConfig = {
   name: "CALLAE",
   domain: "callae.eu",
   url: "https://callae.eu",
-  tagline: "Transforming complexity into value.",
-  supportingLine:
-    "We partner with organisations to design, build and scale solutions that create measurable impact.",
+  tagline: "We build the foundations for what comes next.",
+  supportingLine: "Govern with confidence. Transform with purpose.",
   description:
     "CALLAE is a consultancy specialising in governance, ServiceNow and digital transformation. We help organisations strengthen governance, improve digital operations and build the foundations for responsible AI adoption.",
   // Contact details are intentionally configurable in one place rather than
@@ -19,10 +18,10 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
-  { label: "Services", href: "#expertise" },
-  { label: "Approach", href: "#approach" },
+  { label: "Advisory", href: "#advisory" },
+  { label: "Delivery", href: "#delivery" },
+  { label: "Labs", href: "#labs" },
   { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
 ] as const;
 
 export type Pillar = {

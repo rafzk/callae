@@ -5,15 +5,15 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-line bg-paper-deep text-ink">
+    <footer className="bg-ink text-paper">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-sm">
             <a href="#top" className="inline-block rounded-sm">
-              <Wordmark className="text-lg" />
+              <Wordmark />
             </a>
-            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-              {siteConfig.tagline}
+            <p className="mt-4 text-sm leading-relaxed text-paper/65">
+              {siteConfig.supportingLine}
             </p>
           </div>
 
@@ -22,22 +22,28 @@ export function SiteFooter() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm uppercase tracking-wide text-ink-soft transition-colors hover:text-ink"
+                className="text-sm text-paper/75 transition-colors hover:text-paper"
               >
                 {link.label}
               </a>
             ))}
+            <a
+              href="#contact"
+              className="text-sm text-paper/75 transition-colors hover:text-paper"
+            >
+              Contact
+            </a>
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-line pt-6 text-sm text-ink-faint sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-paper/15 pt-6 text-sm text-paper/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
             &copy; {year} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex gap-5">
             <a
               href={`mailto:${siteConfig.email}`}
-              className="transition-colors hover:text-ink"
+              className="transition-colors hover:text-paper"
             >
               {siteConfig.email}
             </a>
@@ -46,7 +52,7 @@ export function SiteFooter() {
                 href={siteConfig.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-ink"
+                className="transition-colors hover:text-paper"
               >
                 LinkedIn
               </a>

@@ -11,20 +11,25 @@ export default function Icon() {
           width: "100%",
           height: "100%",
           display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
           alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#060607",
+          gap: 6,
+          padding: "36px 30px",
+          backgroundColor: "#10192B",
         }}
       >
-        <svg width="90" height="90" viewBox="0 0 32 32" fill="none">
-          <path
-            d="M8 23 L16 8 L24 23"
-            stroke="#A3E635"
-            strokeWidth="4.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <div style={{ display: "flex", width: 108, height: 16, backgroundColor: "#FFFFFF" }} />
+        <div
+          style={{
+            display: "flex",
+            width: 78,
+            height: 16,
+            backgroundColor: "#FFFFFF",
+            opacity: 0.78,
+          }}
+        />
+        <div style={{ display: "flex", width: 48, height: 16, backgroundColor: "#1E3A8A" }} />
       </div>
     ),
     { ...size }

@@ -31,7 +31,7 @@ export function About() {
               >
                 <span
                   aria-hidden
-                  className="mt-2 h-1.5 w-1.5 flex-shrink-0 bg-lime"
+                  className="mt-2 h-1.5 w-1.5 flex-shrink-0 bg-blue"
                 />
                 {fact}
               </li>
@@ -45,7 +45,7 @@ export function About() {
                   key={item.name}
                   className="flex max-w-xs flex-col items-start gap-1.5 rounded-xl border border-line bg-paper-deep px-5 py-4 text-left sm:max-w-none sm:flex-row sm:items-center sm:gap-3"
                 >
-                  <span className="font-display shrink-0 text-sm font-medium text-lime">
+                  <span className="font-display shrink-0 text-sm font-medium text-blue">
                     {item.name}
                   </span>
                   <span

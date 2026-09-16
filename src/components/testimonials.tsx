@@ -13,7 +13,7 @@ export function Testimonials() {
             <svg
               aria-hidden
               viewBox="0 0 32 24"
-              className="mx-auto h-8 w-auto text-lime"
+              className="mx-auto h-8 w-auto text-blue"
               fill="currentColor"
             >
               <path d="M13.3 0 6.4 12.6C4.5 16 3.5 18.8 3.5 21c0 1.8 1.4 3 3.2 3 1.9 0 3.3-1.4 3.3-3.4 0-1.7-1.1-3-2.6-3.3.4-1.9 1.6-4.3 3.5-7.2L13.3 0Zm14.8 0-6.9 12.6c-1.9 3.4-2.9 6.2-2.9 8.4 0 1.8 1.4 3 3.2 3 1.9 0 3.3-1.4 3.3-3.4 0-1.7-1.1-3-2.6-3.3.4-1.9 1.6-4.3 3.5-7.2L28.1 0Z" />
