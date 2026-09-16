@@ -23,6 +23,18 @@ export function Hero() {
       className="full-viewport relative flex flex-col overflow-hidden"
       style={darkScope}
     >
+      {/* Soft, slowly-pulsing colour glow for atmosphere behind the
+          content — same blue as the rest of the brand, not a new hue. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-blue/20 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full bg-blue/15 blur-3xl"
+        style={{ animationDelay: "1s" }}
+      />
+
       <div className="relative mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center px-6 py-20 text-center sm:px-8 sm:py-28">
         <Reveal className="flex flex-col items-center">
           <ArchitecturalVisual className="h-auto w-full max-w-[220px] text-ink sm:max-w-[260px]" />
