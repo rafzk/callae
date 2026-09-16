@@ -32,6 +32,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Bulletproof full-viewport-height helper. `dvh` alone breaks silently (no
+   min-height at all) on any browser that doesn't parse it, since the whole
+   declaration gets dropped. A plain duplicate-declaration fallback doesn't
+   survive the production build either — the CSS minifier collapses same-
+   property duplicates in one rule down to just the last one. @supports is
+   the fallback pattern that actually survives minification. */
+.full-viewport {
+  min-height: 100vh;
+}
+
+@supports (min-height: 100dvh) {
+  .full-viewport {
+    min-height: 100dvh;
+  }
+}
+
 body {
   background: var(--color-paper);
   color: var(--color-ink);

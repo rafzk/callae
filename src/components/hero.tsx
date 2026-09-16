@@ -20,7 +20,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-dvh flex-col overflow-hidden"
+      className="full-viewport relative flex flex-col overflow-hidden"
       style={darkScope}
     >
       <div className="relative mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center px-6 py-20 text-center sm:px-8 sm:py-28">
