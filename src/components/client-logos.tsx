@@ -9,7 +9,7 @@ export function ClientLogos() {
 
   return (
     <section className="border-b border-line bg-paper">
-      <div className="mx-auto max-w-5xl px-6 py-14 text-center sm:px-8">
+      <div className="mx-auto max-w-5xl px-6 py-20 text-center sm:px-8 sm:py-24">
         <p className="text-sm font-medium uppercase tracking-[0.18em] text-ink-faint">
           Trusted by
         </p>
