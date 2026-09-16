@@ -140,17 +140,29 @@ export type ClientLogo = {
 
 // Real, current clients only. Never add a placeholder or invented company
 // here — the component that reads this renders nothing while it's empty.
-export const clientLogos: ClientLogo[] = [{ name: "Wrangu" }];
+export const clientLogos: ClientLogo[] = [
+  { name: "Wrangu" },
+  { name: "LambWeston" },
+];
 
 export type Testimonial = {
   quote: string;
   name: string;
+  // Job title if given; falls back to just the company when it isn't, so
+  // the site never invents a title that wasn't actually provided.
   role: string;
 };
 
-// Empty until there's a real client quote, given with permission. Never
-// invent a quote, a name or a role.
-export const testimonials: Testimonial[] = [];
+// Real client quotes only, given with permission. Never invent a quote, a
+// name or a role.
+export const testimonials: Testimonial[] = [
+  {
+    quote:
+      "Rafael brought a rare combination of hands-on technical skill and genuine business judgement. Our platform is more coherent today because of the foundation he insisted on.",
+    name: "Axel",
+    role: "LambWeston",
+  },
+];
 
 export type Recognition = {
   name: string;
