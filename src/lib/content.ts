@@ -183,7 +183,7 @@ export type ClientLogo = {
 // while it's empty.
 export const clientLogos: ClientLogo[] = [
   { name: "Wrangu", logoSrc: "/logos/wrangu.svg" },
-  { name: "ServiceNow" },
+  { name: "ServiceNow", logoSrc: "/logos/servicenow.svg" },
 ];
 
 export type Testimonial = {
