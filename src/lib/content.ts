@@ -42,11 +42,6 @@ export const legalPages: LegalPage[] = [
     description: "What cookies this site does — and doesn't — use.",
   },
   {
-    title: "Cookie Preferences",
-    href: "/legal/cookie-preferences",
-    description: "Manage cookie categories for this site.",
-  },
-  {
     title: "GDPR",
     href: "/legal/gdpr",
     description: "Your rights under the GDPR and how to exercise them.",
@@ -54,7 +49,8 @@ export const legalPages: LegalPage[] = [
   {
     title: "Privacy Statement",
     href: "/legal/privacy",
-    description: "What personal data we collect and how we use it.",
+    description:
+      "What personal data we collect, how we use it, and the choices you have.",
   },
   {
     title: "Site Terms",
@@ -65,11 +61,6 @@ export const legalPages: LegalPage[] = [
     title: "Sitemap",
     href: "/legal/sitemap",
     description: "Every page on this site, in one place.",
-  },
-  {
-    title: "Your Privacy Choices",
-    href: "/legal/privacy-choices",
-    description: "The choices you have over your personal data and marketing.",
   },
 ];
 
