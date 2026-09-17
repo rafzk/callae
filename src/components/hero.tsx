@@ -18,7 +18,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="full-viewport relative flex flex-col overflow-hidden"
+      className="full-viewport relative grid place-items-center overflow-hidden"
       style={darkScope}
     >
       {/* Soft, slowly-pulsing colour glow for atmosphere behind the
@@ -33,7 +33,7 @@ export function Hero() {
         style={{ animationDelay: "1s" }}
       />
 
-      <div className="relative mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center px-6 py-20 text-center sm:px-8 sm:py-28">
+      <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-20 text-center sm:px-8 sm:py-28">
         <Reveal className="flex flex-col items-center">
           <ArchitecturalVisual className="h-auto w-full max-w-[220px] text-ink sm:max-w-[260px]" />
 

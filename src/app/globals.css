@@ -122,6 +122,28 @@ body {
   animation: arch-float 5s ease-in-out infinite;
 }
 
+/* Rests to the left of the wordmark, then every cycle visits the first "A"
+   in CALLAE and returns — the offset is tuned by eye for CALLAE's own
+   tracking/size, not derived from it. */
+@keyframes wordmark-icon-visit {
+  0%,
+  55% {
+    transform: translateX(0);
+  }
+  65%,
+  80% {
+    transform: translateX(38px);
+  }
+  92%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.wordmark-icon {
+  animation: wordmark-icon-visit 7s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(22px);
