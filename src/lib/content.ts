@@ -193,14 +193,15 @@ export type Testimonial = {
   role: string;
 };
 
-// Real client quotes only, given with permission. Never invent a quote, a
-// name or a role.
+// Real client quotes only, given with permission. Never invent a quote.
+// Attribution here is anonymised at the client's request: don't add back
+// the real name or company.
 export const testimonials: Testimonial[] = [
   {
     quote:
       "Rafael brought a rare combination of hands-on technical skill and genuine business judgement. Our platform is more coherent today because of the foundation he insisted on.",
-    name: "Axel",
-    role: "LambWeston",
+    name: "A client",
+    role: "Food & beverage manufacturing",
   },
 ];
 
