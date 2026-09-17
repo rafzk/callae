@@ -22,7 +22,7 @@ export function Testimonials() {
               {item.quote}
             </p>
             <footer className="mt-8 text-sm text-ink-faint">
-              <span className="font-medium text-ink">{item.name}</span> —{" "}
+              <span className="font-medium text-ink">{item.name}</span>,{" "}
               {item.role}
             </footer>
           </blockquote>

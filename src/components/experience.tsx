@@ -8,7 +8,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="Selected experience"
           title="Where that expertise was built"
-          description="Areas of Rafael's own experience, gained in roles and engagements prior to founding CALLAE — not previous CALLAE client work."
+          description="Areas of Rafael's own experience, gained in roles and engagements prior to founding CALLAE: not previous CALLAE client work."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-x-10 gap-y-10 border-t border-line pt-10 sm:grid-cols-3">

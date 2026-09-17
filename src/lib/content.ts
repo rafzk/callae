@@ -39,7 +39,7 @@ export const legalPages: LegalPage[] = [
   {
     title: "Cookie Policy",
     href: "/legal/cookies",
-    description: "What cookies this site does — and doesn't — use.",
+    description: "What cookies this site does, and doesn't, use.",
   },
   {
     title: "GDPR",
@@ -70,7 +70,7 @@ export const legalConfig = {
   entityName: "Rafael Cardoso",
   tradingAs: "CALLAE",
   country: "Portugal",
-  taxId: "[NIF — add before launch]",
+  taxId: "[Add NIF before launch]",
   supervisoryAuthority: {
     name: "Comissão Nacional de Proteção de Dados (CNPD)",
     url: "https://www.cnpd.pt",
@@ -104,7 +104,7 @@ export const pillars: Pillar[] = [
     name: "Delivery",
     kicker: "02",
     description:
-      "ServiceNow delivery, from workflow design to integration — built to be maintained by your team, not just handed over.",
+      "ServiceNow delivery, from workflow design to integration, built to be maintained by your team, not just handed over.",
     examples: [
       "Integrated Risk Management implementation and configuration",
       "Workflow design and process automation across GRC and ITSM",
@@ -137,7 +137,7 @@ export const approachSteps: ApproachStep[] = [
     step: "01",
     title: "Understand the context",
     description:
-      "Every organisation carries its own history, constraints and priorities. We start by listening — to the people who use the systems, not just the ones who commission them.",
+      "Every organisation carries its own history, constraints and priorities. We start by listening to the people who use the systems, not just the ones who commission them.",
   },
   {
     step: "02",
@@ -149,7 +149,7 @@ export const approachSteps: ApproachStep[] = [
     step: "03",
     title: "Build with purpose",
     description:
-      "Delivery is hands-on and senior throughout. Solutions are built to be maintainable — clear, documented and no more complex than the problem requires.",
+      "Delivery is hands-on and senior throughout. Solutions are built to be maintainable: clear, documented and no more complex than the problem requires.",
   },
   {
     step: "04",
@@ -166,7 +166,7 @@ export const founder = {
     "Working with ServiceNow since 2015",
     "Specialising in Integrated Risk Management and GRC since 2019",
   ],
-  bio: "Rafael founded CALLAE to bring senior, hands-on expertise to governance and ServiceNow engagements from day one. His background spans enterprise programmes, technical leadership, solution architecture and implementation — with a particular focus on governance, risk and compliance on the ServiceNow platform.",
+  bio: "Rafael founded CALLAE to bring senior, hands-on expertise to governance and ServiceNow engagements from day one. His background spans enterprise programmes, technical leadership, solution architecture and implementation, with a particular focus on governance, risk and compliance on the ServiceNow platform.",
 };
 
 export type ClientLogo = {
@@ -249,11 +249,11 @@ export const perspective = {
   body: [
     "AI adoption is often discussed as a technology decision. In practice, it's a governance decision first. Systems that automate decisions or surface recommendations are only as dependable as the accountability, data and processes underneath them.",
     "That means clear ownership of decisions, data that's structured and trustworthy enough to act on, and processes designed with enough rigour to support automation rather than just tolerate it.",
-    "We don't sell AI products. We help organisations put those foundations in place, so that when they do adopt AI — on their own terms and timeline — it's built on something solid.",
+    "We don't sell AI products. We help organisations put those foundations in place, so that when they do adopt AI, on their own terms and timeline, it's built on something solid.",
   ],
 };
 
 export const contactCopy = {
   heading: "What are you building next?",
-  body: "Whether it's a governance programme, a platform challenge or an early-stage idea, we're glad to talk it through — no obligation, no sales process.",
+  body: "Whether it's a governance programme, a platform challenge or an early-stage idea, we're glad to talk it through: no obligation, no sales process.",
 };

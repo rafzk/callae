@@ -54,7 +54,7 @@ export function SiteHeader({ forceSolid = false }: { forceSolid?: boolean } = {}
           href="/#top"
           className={`rounded-sm ${solid ? "" : "text-white"}`}
           onClick={() => setOpen(false)}
-          aria-label={`${"CALLAE"} — back to top`}
+          aria-label="CALLAE, back to top"
         >
           <Wordmark
             underlineClassName={solid ? "bg-blue" : "bg-white/70"}

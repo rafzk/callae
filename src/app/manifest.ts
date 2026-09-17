@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/content";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${siteConfig.name} — Governance, ServiceNow & Digital Transformation`,
+    name: `${siteConfig.name} | Governance, ServiceNow & Digital Transformation`,
     short_name: siteConfig.name,
     description: siteConfig.description,
     start_url: "/",

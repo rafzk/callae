@@ -6,7 +6,7 @@ import { legalProse } from "@/lib/legal-prose";
 
 export const metadata: Metadata = {
   title: "Cookie Policy",
-  description: `What cookies ${siteConfig.name}'s website does — and doesn't — use.`,
+  description: `What cookies ${siteConfig.name}'s website does, and doesn't, use.`,
 };
 
 const { h2, p, ul, link } = legalProse;
@@ -40,7 +40,7 @@ export default function CookiesPage() {
       <p className={p}>
         A cookie is a small file a website can store on your device to
         remember information between visits. This page explains what this
-        site does — and, just as importantly, doesn&rsquo;t — use them for.
+        site does, and just as importantly doesn&rsquo;t, use them for.
       </p>
 
       <h2 className={h2}>This site doesn&rsquo;t use tracking cookies</h2>
@@ -65,7 +65,7 @@ export default function CookiesPage() {
         <li>
           <strong className="font-medium text-ink">Contact form.</strong> If
           you submit the contact form, our form processor, Web3Forms, handles
-          that submission — see their own{" "}
+          that submission. See their own{" "}
           <a
             href="https://web3forms.com/privacy-policy"
             target="_blank"
@@ -81,7 +81,7 @@ export default function CookiesPage() {
       <h2 className={h2}>Cookie categories</h2>
       <p className={p}>
         Shown for transparency, and reflecting the actual state of the site
-        today. There&rsquo;s nothing for you to switch on or off yet — if
+        today. There&rsquo;s nothing for you to switch on or off yet; if
         that ever changes, this section will let you choose which categories
         to allow, and a consent banner will ask before any non-essential
         cookie is set.

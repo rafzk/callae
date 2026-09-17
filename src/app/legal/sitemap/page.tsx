@@ -41,8 +41,8 @@ export default function SitemapPage() {
             <Link href={page.href} className={link}>
               {page.title}
             </Link>
-            <span className="ml-2 text-sm text-ink-faint">
-              — {page.description}
+            <span className="block text-sm text-ink-faint">
+              {page.description}
             </span>
           </li>
         ))}

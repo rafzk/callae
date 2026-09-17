@@ -25,7 +25,7 @@ export default function TermsPage() {
       </p>
       <p className={p}>
         These terms cover the website only. They don&rsquo;t govern any
-        advisory, delivery or other services engagement — those are covered by
+        advisory, delivery or other services engagement: those are covered by
         a separate, signed agreement with each client.
       </p>
 
@@ -39,8 +39,8 @@ export default function TermsPage() {
 
       <h2 className={h2}>Intellectual property</h2>
       <p className={p}>
-        The site&rsquo;s content — text, design, graphics and the{" "}
-        {siteConfig.name} name and mark — belongs to us or our licensors and
+        The site&rsquo;s content (text, design, graphics and the{" "}
+        {siteConfig.name} name and mark) belongs to us or our licensors and
         is protected by copyright and other intellectual property laws.
         Nothing on the site grants you a licence to use it beyond browsing.
       </p>

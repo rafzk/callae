@@ -8,7 +8,7 @@ export function Approach() {
         <SectionHeading
           eyebrow="How we work"
           title="A practical approach, built on foundations"
-          description="Hands-on, senior expertise from first conversation to handover — with the aim of leaving your team more capable than we found it."
+          description="Hands-on, senior expertise from first conversation to handover, with the aim of leaving your team more capable than we found it."
         />
 
         <ol className="mt-16 grid grid-cols-1 gap-x-10 gap-y-14 sm:grid-cols-2">

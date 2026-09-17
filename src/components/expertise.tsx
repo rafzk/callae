@@ -15,7 +15,7 @@ export function Expertise() {
         <SectionHeading
           eyebrow="What we do"
           title="Three ways we help"
-          description="Complementary areas of work — engaged together on a programme, or on their own for a focused piece of advice or delivery."
+          description="Complementary areas of work, engaged together on a programme, or on their own for a focused piece of advice or delivery."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
