@@ -66,17 +66,6 @@ export function Hero() {
           </div>
         </Reveal>
       </div>
-
-      {/* Dissolves the gradient into the page background instead of cutting
-          straight to white, so the dark hero and light content read as one
-          continuous page rather than two stitched-together sections. */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-28 sm:h-36"
-        style={{
-          background: "linear-gradient(to bottom, transparent, var(--color-paper))",
-        }}
-      />
     </section>
   );
 }
