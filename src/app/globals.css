@@ -156,6 +156,19 @@ body {
   animation: hero-root-node-pulse 7s ease-in-out infinite;
 }
 
+.hero-light {
+  opacity: 0.5;
+}
+
+/* SMIL animations (animateMotion) ignore the CSS animation-duration
+   override above, so the travelling lights need their own reduced-motion
+   fallback: just don't render them. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-light {
+    display: none;
+  }
+}
+
 .testimonial-enter {
   animation: arch-rise-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
