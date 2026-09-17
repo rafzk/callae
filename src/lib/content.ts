@@ -3,7 +3,7 @@ export const siteConfig = {
   domain: "callae.eu",
   url: "https://callae.eu",
   tagline: "We build the foundations for what comes next.",
-  supportingLine: "Govern with confidence. Transform with purpose.",
+  supportingLine: "Build and govern what's next on ServiceNow with confidence.",
   description:
     "CALLAE is a consultancy specialising in governance, ServiceNow and digital transformation. We help organisations strengthen governance, improve digital operations and build the foundations for responsible AI adoption.",
   // Contact details are intentionally configurable in one place rather than
