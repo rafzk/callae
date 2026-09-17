@@ -91,7 +91,7 @@ export const pillars: Pillar[] = [
     name: "Advisory",
     kicker: "01",
     description:
-      "Independent, senior-level advice on governance, risk and platform direction — for organisations that need clear thinking before they commit resources.",
+      "Independent, senior-level advice on governance, risk and platform direction, for organisations that need clear thinking before they commit resources.",
     examples: [
       "Governance, risk and compliance strategy and target operating models",
       "ServiceNow platform direction and roadmap prioritisation",
