@@ -1,13 +1,21 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/content";
+import { legalPages, siteConfig } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date();
+
   return [
     {
       url: siteConfig.url,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "monthly",
       priority: 1,
     },
+    ...legalPages.map((page) => ({
+      url: `${siteConfig.url}${page.href}`,
+      lastModified,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    })),
   ];
 }

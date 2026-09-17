@@ -1,4 +1,5 @@
-import { navLinks, siteConfig } from "@/lib/content";
+import Link from "next/link";
+import { legalPages, navLinks, siteConfig } from "@/lib/content";
 import { Wordmark } from "./wordmark";
 
 export function SiteFooter() {
@@ -9,9 +10,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-sm">
-            <a href="#top" className="inline-block rounded-sm">
+            <Link href="/#top" className="inline-block rounded-sm">
               <Wordmark />
-            </a>
+            </Link>
             <p className="mt-4 text-sm leading-relaxed text-paper/65">
               {siteConfig.supportingLine}
             </p>
@@ -19,13 +20,13 @@ export function SiteFooter() {
 
           <nav aria-label="Footer" className="flex flex-col gap-3 sm:items-end">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-sm text-paper/75 transition-colors hover:text-paper"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
@@ -53,6 +54,21 @@ export function SiteFooter() {
             ) : null}
           </div>
         </div>
+
+        <nav
+          aria-label="Legal"
+          className="mt-6 flex flex-wrap gap-x-5 gap-y-2 border-t border-paper/15 pt-6 text-xs text-paper/50"
+        >
+          {legalPages.map((page) => (
+            <Link
+              key={page.href}
+              href={page.href}
+              className="transition-colors hover:text-paper/80"
+            >
+              {page.title}
+            </Link>
+          ))}
+        </nav>
       </div>
     </footer>
   );
