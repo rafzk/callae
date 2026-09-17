@@ -228,29 +228,6 @@ export const recognitions: Recognition[] = [
   },
 ];
 
-export type ExperienceItem = {
-  title: string;
-  description: string;
-};
-
-export const experienceItems: ExperienceItem[] = [
-  {
-    title: "Enterprise operational risk and compliance transformation",
-    description:
-      "Leading the design and delivery of operational risk and compliance capabilities for large, regulated organisations, from target operating model through to platform configuration.",
-  },
-  {
-    title: "Entity modelling and governance workflows",
-    description:
-      "Designing entity and hierarchy models and the governance workflows built on top of them, to give risk and compliance processes a structure they can scale with.",
-  },
-  {
-    title: "Customer service and portal modernisation",
-    description:
-      "Modernising customer service platforms and self-service portals, improving how employees and customers interact with underlying systems and processes.",
-  },
-];
-
 export const perspective = {
   heading: "Built for governance. Ready for AI.",
   body: [

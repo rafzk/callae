@@ -2,7 +2,6 @@ import { About } from "@/components/about";
 import { Approach } from "@/components/approach";
 import { ClientLogos } from "@/components/client-logos";
 import { Contact } from "@/components/contact";
-import { Experience } from "@/components/experience";
 import { Expertise } from "@/components/expertise";
 import { Hero } from "@/components/hero";
 import { Perspective } from "@/components/perspective";
@@ -28,9 +27,6 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <About />
-        </Reveal>
-        <Reveal>
-          <Experience />
         </Reveal>
         <Reveal>
           <Testimonials />
