@@ -122,6 +122,10 @@ body {
   animation: arch-float 5s ease-in-out infinite;
 }
 
+.testimonial-enter {
+  animation: arch-rise-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* Rests to the left of the wordmark, then every cycle visits the first "A"
    in CALLAE and returns — the offset is tuned by eye for CALLAE's own
    tracking/size, not derived from it. */
