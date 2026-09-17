@@ -193,8 +193,8 @@ export type Testimonial = {
   role: string;
 };
 
-// Real client quotes only, given with permission. Never invent a quote.
-// Attribution here is anonymised at the client's request: don't add back
+// Real quotes only, given with permission. Never invent a quote. The first
+// entry's attribution is anonymised at the client's request: don't add back
 // the real name or company.
 export const testimonials: Testimonial[] = [
   {
@@ -202,6 +202,12 @@ export const testimonials: Testimonial[] = [
       "Rafael brought a rare combination of hands-on technical skill and genuine business judgement. Our platform is more coherent today because of the foundation he insisted on.",
     name: "A client",
     role: "Food & beverage manufacturing",
+  },
+  {
+    quote:
+      "Raf joined our IRM programme for a major financial services client mid-flight, stepping into a critical role and becoming effective almost immediately. He was a constant source of technical leadership, trusted by both our team and the client's stakeholders to drive complex workstreams, resolve defects, and lead code promotion and cutover activities through to a successful go-live. Beyond the technical impact, he built genuine credibility with client stakeholders and was a pleasure to work with throughout.",
+    name: "Programme Leadership",
+    role: "ServiceNow",
   },
 ];
 
