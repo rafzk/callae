@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { ArchitecturalVisual } from "./architectural-visual";
+import { HeroNetwork } from "./hero-network";
 import { Reveal } from "./reveal";
 
 // Scopes the ink/line tokens to their on-dark equivalents for this section
@@ -21,6 +22,8 @@ export function Hero() {
       className="full-viewport relative grid place-items-center overflow-hidden"
       style={darkScope}
     >
+      <HeroNetwork />
+
       {/* Soft, slowly-pulsing colour glow for atmosphere behind the
           content — the periwinkle accent, not a new hue. */}
       <div
