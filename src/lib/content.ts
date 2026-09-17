@@ -200,7 +200,7 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "Rafael brought a rare combination of hands-on technical skill and genuine business judgement. Our platform is more coherent today because of the foundation he insisted on.",
-    name: "A client",
+    name: "Product Owner",
     role: "Food & beverage manufacturing",
   },
   {
