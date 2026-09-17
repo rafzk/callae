@@ -161,6 +161,7 @@ export const approachSteps: ApproachStep[] = [
 
 export const founder = {
   name: "Rafael Cardoso",
+  photoSrc: "/team/rafael-cardoso.jpg",
   facts: [
     "10+ years working in IT",
     "Working with ServiceNow since 2015",

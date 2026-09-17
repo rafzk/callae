@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { founder, recognitions } from "@/lib/content";
 import { SectionHeading } from "./section-heading";
 
@@ -8,12 +9,13 @@ export function About() {
         <SectionHeading eyebrow="About" title="About CALLAE" />
 
         <div className="mt-14 flex flex-col items-center text-center">
-          <div
-            aria-hidden
-            className="flex h-20 w-20 flex-shrink-0 items-center justify-center border border-ink font-display text-xl text-ink"
-          >
-            RC
-          </div>
+          <Image
+            src={founder.photoSrc}
+            alt={founder.name}
+            width={224}
+            height={224}
+            className="h-28 w-28 flex-shrink-0 rounded-full border border-line object-cover object-top"
+          />
           <p className="font-display mt-5 text-xl font-medium text-ink">
             {founder.name}
           </p>
