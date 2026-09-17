@@ -15,7 +15,7 @@ export function Wordmark({
       <svg
         aria-hidden
         viewBox="0 0 18 14"
-        className={`relative z-10 h-[13px] w-[16px] shrink-0 sm:h-[14px] sm:w-[18px] ${
+        className={`relative z-10 mt-px h-[13px] w-[16px] shrink-0 sm:mt-[5px] sm:h-[14px] sm:w-[18px] ${
           animated ? "wordmark-icon" : ""
         }`}
       >
