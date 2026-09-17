@@ -182,7 +182,7 @@ export type ClientLogo = {
 // invented name here — the component that reads this renders nothing
 // while it's empty.
 export const clientLogos: ClientLogo[] = [
-  { name: "Wrangu" },
+  { name: "Wrangu", logoSrc: "/logos/wrangu.svg" },
   { name: "ServiceNow" },
 ];
 
