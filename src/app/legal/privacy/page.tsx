@@ -68,8 +68,7 @@ export default function PrivacyPage() {
       </ul>
       <p className={p}>
         We don&rsquo;t use your data for automated decision-making or
-        profiling, and we don&rsquo;t sell or share it with third parties for
-        their own marketing purposes.
+        profiling.
       </p>
 
       <h2 className={h2}>Who we share it with</h2>
@@ -110,6 +109,28 @@ export default function PrivacyPage() {
         period required afterwards for legal, accounting or tax purposes. We
         don&rsquo;t keep enquiry data indefinitely, and we delete it once
         it&rsquo;s no longer needed for these purposes.
+      </p>
+
+      <h2 className={h2}>Your privacy choices</h2>
+      <p className={p}>
+        {siteConfig.name} doesn&rsquo;t sell personal data, and doesn&rsquo;t
+        share it with third parties for their own advertising or marketing
+        purposes. There&rsquo;s no ad-tracking on this site, so there&rsquo;s
+        nothing to opt out of on that front.
+      </p>
+      <p className={p}>
+        We don&rsquo;t currently run an email newsletter or marketing list.
+        If you contact us, we&rsquo;ll only use your details to respond and,
+        where relevant, discuss a possible engagement — never to add you to a
+        marketing list without asking first.
+      </p>
+      <p className={p}>
+        This site doesn&rsquo;t set analytics or advertising cookies — see
+        our{" "}
+        <Link href="/legal/cookies" className={link}>
+          Cookie Policy
+        </Link>{" "}
+        for the full breakdown.
       </p>
 
       <h2 className={h2}>Your rights</h2>

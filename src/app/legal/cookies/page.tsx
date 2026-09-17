@@ -11,6 +11,27 @@ export const metadata: Metadata = {
 
 const { h2, p, ul, link } = legalProse;
 
+const categories = [
+  {
+    name: "Strictly necessary",
+    status: "Always on",
+    description:
+      "Technical mechanisms required to serve the site reliably and securely. Not used for tracking, and can't be switched off.",
+  },
+  {
+    name: "Analytics",
+    status: "Not in use",
+    description:
+      "Would measure how visitors use the site. This site doesn't currently run analytics of any kind.",
+  },
+  {
+    name: "Marketing",
+    status: "Not in use",
+    description:
+      "Would support advertising or retargeting. This site doesn't run any marketing or advertising cookies.",
+  },
+] as const;
+
 export default function CookiesPage() {
   return (
     <>
@@ -57,19 +78,39 @@ export default function CookiesPage() {
         </li>
       </ul>
 
+      <h2 className={h2}>Cookie categories</h2>
+      <p className={p}>
+        Shown for transparency, and reflecting the actual state of the site
+        today. There&rsquo;s nothing for you to switch on or off yet — if
+        that ever changes, this section will let you choose which categories
+        to allow, and a consent banner will ask before any non-essential
+        cookie is set.
+      </p>
+      <ul className="mb-4 space-y-4">
+        {categories.map((category) => (
+          <li
+            key={category.name}
+            className="border border-line bg-paper-deep px-5 py-4"
+          >
+            <div className="flex items-center justify-between gap-4">
+              <span className="font-medium text-ink">{category.name}</span>
+              <span className="shrink-0 rounded-full border border-line px-3 py-1 text-xs font-medium uppercase tracking-[0.08em] text-ink-soft">
+                {category.status}
+              </span>
+            </div>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              {category.description}
+            </p>
+          </li>
+        ))}
+      </ul>
+
       <h2 className={h2}>Managing cookies in your browser</h2>
       <p className={p}>
         Since this site doesn&rsquo;t set tracking cookies, there&rsquo;s
         nothing to opt out of here. If you&rsquo;d still like to control or
         clear cookies generally, you can do so through your browser&rsquo;s
-        settings at any time.
-      </p>
-      <p className={p}>
-        See our{" "}
-        <Link href="/legal/cookie-preferences" className={link}>
-          Cookie Preferences
-        </Link>{" "}
-        page for a category-by-category breakdown, and our{" "}
+        settings at any time. See our{" "}
         <Link href="/legal/privacy" className={link}>
           Privacy Statement
         </Link>{" "}
@@ -79,8 +120,8 @@ export default function CookiesPage() {
       <h2 className={h2}>Changes to this policy</h2>
       <p className={p}>
         If we ever add analytics or other non-essential cookies, this page
-        and our Cookie Preferences page will be updated first, and a consent
-        banner will be added before any such cookie is set.
+        will be updated first, and a consent banner will be added before any
+        such cookie is set.
       </p>
     </>
   );
