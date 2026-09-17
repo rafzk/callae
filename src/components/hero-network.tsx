@@ -1,35 +1,64 @@
-// A quiet constellation of connected nodes in the hero's periphery — a
-// literal nod to "connections" that stays out of the way of the headline,
-// which sits in the empty middle band. Opacity and motion are kept low on
-// purpose; this is atmosphere, not a focal point.
-const nodes = [
-  { x: 100, y: 150 },
-  { x: 230, y: 300 },
-  { x: 150, y: 480 },
-  { x: 290, y: 630 },
-  { x: 650, y: 90 },
-  { x: 950, y: 130 },
-  { x: 1300, y: 180 },
-  { x: 1180, y: 340 },
-  { x: 1340, y: 520 },
-  { x: 1200, y: 680 },
-  { x: 610, y: 790 },
-  { x: 950, y: 760 },
-];
-
-const edges: [number, number][] = [
-  [0, 1],
-  [1, 2],
-  [2, 3],
-  [1, 4],
-  [4, 5],
-  [5, 7],
-  [6, 7],
-  [7, 8],
-  [8, 9],
-  [3, 10],
-  [10, 11],
-  [9, 11],
+// Barely-there root/dendrite clusters growing in from each corner — reads
+// as neural roots more than a geometric mesh, and stays out of the way of
+// the headline in the middle. Opacity is intentionally very low; this is
+// atmosphere, not a focal point.
+const clusters = [
+  {
+    trunk: "M -20,40 C 60,60 90,120 140,160",
+    branches: [
+      "M 60,60 C 40,110 20,140 10,190",
+      "M 90,120 C 130,170 110,210 150,250",
+      "M 140,160 C 190,175 210,150 250,160",
+    ],
+    tips: [
+      { x: 140, y: 160 },
+      { x: 10, y: 190 },
+      { x: 150, y: 250 },
+      { x: 250, y: 160 },
+    ],
+  },
+  {
+    trunk: "M 1460,60 C 1380,80 1350,140 1300,180",
+    branches: [
+      "M 1380,80 C 1400,130 1420,160 1430,210",
+      "M 1350,140 C 1310,190 1330,230 1290,270",
+      "M 1300,180 C 1250,195 1230,170 1190,180",
+    ],
+    tips: [
+      { x: 1300, y: 180 },
+      { x: 1430, y: 210 },
+      { x: 1290, y: 270 },
+      { x: 1190, y: 180 },
+    ],
+  },
+  {
+    trunk: "M -20,860 C 60,840 90,780 140,740",
+    branches: [
+      "M 60,840 C 40,790 20,760 10,710",
+      "M 90,780 C 130,730 110,690 150,650",
+      "M 140,740 C 190,725 210,750 250,740",
+    ],
+    tips: [
+      { x: 140, y: 740 },
+      { x: 10, y: 710 },
+      { x: 150, y: 650 },
+      { x: 250, y: 740 },
+    ],
+  },
+  {
+    trunk: "M 1460,840 C 1380,820 1350,760 1300,720",
+    branches: [
+      "M 1380,820 C 1400,770 1420,740 1430,690",
+      "M 1350,760 C 1310,710 1330,670 1290,630",
+      "M 1300,720 C 1250,705 1230,730 1190,720",
+    ],
+    tips: [
+      { x: 1300, y: 720 },
+      { x: 1430, y: 690 },
+      { x: 1290, y: 630 },
+      { x: 1190, y: 720 },
+    ],
+  },
 ];
 
 export function HeroNetwork() {
@@ -40,33 +69,39 @@ export function HeroNetwork() {
       preserveAspectRatio="xMidYMid slice"
       className="pointer-events-none absolute inset-0 h-full w-full text-ink"
     >
-      {edges.map(([a, b], i) => {
-        const from = nodes[a];
-        const to = nodes[b];
-        return (
-          <line
-            key={`${a}-${b}`}
-            x1={from.x}
-            y1={from.y}
-            x2={to.x}
-            y2={to.y}
+      {clusters.map((cluster, ci) => (
+        <g key={ci}>
+          <path
+            d={cluster.trunk}
             stroke="currentColor"
             strokeWidth="1"
-            className="hero-network-line"
-            style={{ animationDelay: `${(i % 6) * 1.1}s` }}
+            fill="none"
+            className="hero-root-line"
+            style={{ animationDelay: `${ci * 1.4}s` }}
           />
-        );
-      })}
-      {nodes.map((node, i) => (
-        <circle
-          key={i}
-          cx={node.x}
-          cy={node.y}
-          r="3"
-          fill="currentColor"
-          className="hero-network-node"
-          style={{ animationDelay: `${(i % 5) * 1.3}s` }}
-        />
+          {cluster.branches.map((branch, bi) => (
+            <path
+              key={bi}
+              d={branch}
+              stroke="currentColor"
+              strokeWidth="0.75"
+              fill="none"
+              className="hero-root-line"
+              style={{ animationDelay: `${ci * 1.4 + bi * 0.9 + 0.5}s` }}
+            />
+          ))}
+          {cluster.tips.map((tip, ti) => (
+            <circle
+              key={ti}
+              cx={tip.x}
+              cy={tip.y}
+              r="2"
+              fill="currentColor"
+              className="hero-root-node"
+              style={{ animationDelay: `${ci * 1.4 + ti * 0.7}s` }}
+            />
+          ))}
+        </g>
       ))}
     </svg>
   );

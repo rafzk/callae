@@ -122,38 +122,38 @@ body {
   animation: arch-float 5s ease-in-out infinite;
 }
 
-@keyframes hero-network-line-pulse {
+@keyframes hero-root-line-pulse {
+  0%,
+  100% {
+    opacity: 0.02;
+  }
+  50% {
+    opacity: 0.09;
+  }
+}
+
+.hero-root-line {
+  opacity: 0.02;
+  animation: hero-root-line-pulse 8s ease-in-out infinite;
+}
+
+@keyframes hero-root-node-pulse {
   0%,
   100% {
     opacity: 0.05;
-  }
-  50% {
-    opacity: 0.22;
-  }
-}
-
-.hero-network-line {
-  opacity: 0.05;
-  animation: hero-network-line-pulse 7s ease-in-out infinite;
-}
-
-@keyframes hero-network-node-pulse {
-  0%,
-  100% {
-    opacity: 0.15;
     transform: scale(0.85);
   }
   50% {
-    opacity: 0.55;
+    opacity: 0.18;
     transform: scale(1);
   }
 }
 
-.hero-network-node {
-  opacity: 0.15;
+.hero-root-node {
+  opacity: 0.05;
   transform-box: fill-box;
   transform-origin: center;
-  animation: hero-network-node-pulse 6s ease-in-out infinite;
+  animation: hero-root-node-pulse 7s ease-in-out infinite;
 }
 
 .testimonial-enter {
