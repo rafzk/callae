@@ -1,39 +1,24 @@
-// A faint neural network across the hero's periphery: root/dendrite
-// clusters growing in from the corners and upper/lower edges, linked by
-// long connector arcs that a soft ball of light travels along. Everything
-// stays out of the middle band where the headline sits, and opacity is
-// intentionally very low — this is atmosphere, not a focal point.
-const clusters = [
-  {
-    id: "tl",
-    trunk: "M -20,40 C 60,60 90,120 140,160",
-    branches: [
-      "M 60,60 C 40,110 20,140 10,190",
-      "M 90,120 C 130,170 110,210 150,250",
-      "M 140,160 C 190,175 210,150 250,160",
-    ],
-    tips: [
-      { x: 140, y: 160 },
-      { x: 10, y: 190 },
-      { x: 150, y: 250 },
-      { x: 250, y: 160 },
-    ],
-  },
-  {
-    id: "tr",
-    trunk: "M 1460,60 C 1380,80 1350,140 1300,180",
-    branches: [
-      "M 1380,80 C 1400,130 1420,160 1430,210",
-      "M 1350,140 C 1310,190 1330,230 1290,270",
-      "M 1300,180 C 1250,195 1230,170 1190,180",
-    ],
-    tips: [
-      { x: 1300, y: 180 },
-      { x: 1430, y: 210 },
-      { x: 1290, y: 270 },
-      { x: 1190, y: 180 },
-    ],
-  },
+// A faint brain silhouette across the top of the hero — nested arcs (its
+// folds) split by a central fissure — with root/dendrite clusters trailing
+// down from it into the lower corners, like a brain's roots. A soft ball
+// of light drifts along a few of the paths. Everything stays out of the
+// middle band where the headline sits, and opacity is intentionally very
+// low — this is atmosphere, not a focal point.
+
+const fissure = "M 720,12 C 716,90 724,180 718,260";
+
+// Nested dome arcs, outermost (lowest, widest) to innermost (highest,
+// narrowest) — reads as the folded surface of a brain in silhouette.
+const domeArcs = [
+  { d: "M 200,220 A 700,230 0 0 1 1240,220", tip: { l: { x: 200, y: 220 }, r: { x: 1240, y: 220 } } },
+  { d: "M 250,175 A 650,200 0 0 1 1190,175", tip: { l: { x: 250, y: 175 }, r: { x: 1190, y: 175 } } },
+  { d: "M 300,135 A 600,170 0 0 1 1140,135", tip: { l: { x: 300, y: 135 }, r: { x: 1140, y: 135 } } },
+  { d: "M 350,100 A 550,145 0 0 1 1090,100", tip: { l: { x: 350, y: 100 }, r: { x: 1090, y: 100 } } },
+  { d: "M 400,70 A 500,120 0 0 1 1040,70", tip: { l: { x: 400, y: 70 }, r: { x: 1040, y: 70 } } },
+];
+
+// Root clusters trailing down from the brain into the lower corners.
+const rootClusters = [
   {
     id: "bl",
     trunk: "M -20,860 C 60,840 90,780 140,740",
@@ -65,32 +50,6 @@ const clusters = [
     ],
   },
   {
-    id: "tcl",
-    trunk: "M 500,-20 C 520,40 480,80 510,130",
-    branches: [
-      "M 520,40 C 570,55 590,30 630,45",
-      "M 480,80 C 440,95 415,75 375,90",
-    ],
-    tips: [
-      { x: 510, y: 130 },
-      { x: 630, y: 45 },
-      { x: 375, y: 90 },
-    ],
-  },
-  {
-    id: "tcr",
-    trunk: "M 940,-20 C 920,40 960,80 930,130",
-    branches: [
-      "M 920,40 C 870,55 850,30 810,45",
-      "M 960,80 C 1000,95 1025,75 1065,90",
-    ],
-    tips: [
-      { x: 930, y: 130 },
-      { x: 810, y: 45 },
-      { x: 1065, y: 90 },
-    ],
-  },
-  {
     id: "bcl",
     trunk: "M 500,920 C 520,860 480,820 510,770",
     branches: [
@@ -118,20 +77,18 @@ const clusters = [
   },
 ];
 
-// Long arcs linking neighbouring clusters into one loose network — also
-// the paths the travelling light dots follow.
+// Long arcs linking the lower root clusters — also the paths some of the
+// travelling light dots follow.
 const connectors = [
-  { id: "conn-top-left", d: "M 250,160 C 350,140 420,150 510,130" },
-  { id: "conn-top-right", d: "M 930,130 C 1020,150 1100,160 1190,180" },
   { id: "conn-bottom-left", d: "M 250,740 C 350,760 420,750 510,770" },
   { id: "conn-bottom-right", d: "M 930,770 C 1020,760 1100,740 1190,720" },
 ];
 
 const lights = [
-  { path: "conn-top-left", duration: 16, begin: 0 },
-  { path: "conn-top-right", duration: 19, begin: 4 },
-  { path: "conn-bottom-left", duration: 18, begin: 8 },
-  { path: "conn-bottom-right", duration: 21, begin: 2 },
+  { path: "dome-1", duration: 19 },
+  { path: "dome-3", duration: 22 },
+  { path: "conn-bottom-left", duration: 18 },
+  { path: "conn-bottom-right", duration: 21 },
 ];
 
 export function HeroNetwork() {
@@ -149,7 +106,45 @@ export function HeroNetwork() {
         </radialGradient>
       </defs>
 
-      {clusters.map((cluster) => (
+      <path
+        d={fissure}
+        stroke="currentColor"
+        strokeWidth="1"
+        fill="none"
+        className="hero-root-line"
+      />
+
+      {domeArcs.map((arc, i) => (
+        <g key={i}>
+          <path
+            id={`dome-${i}`}
+            d={arc.d}
+            stroke="currentColor"
+            strokeWidth="0.75"
+            fill="none"
+            className="hero-root-line"
+            style={{ animationDelay: `${i * 0.6}s` }}
+          />
+          <circle
+            cx={arc.tip.l.x}
+            cy={arc.tip.l.y}
+            r="2"
+            fill="currentColor"
+            className="hero-root-node"
+            style={{ animationDelay: `${i * 0.5}s` }}
+          />
+          <circle
+            cx={arc.tip.r.x}
+            cy={arc.tip.r.y}
+            r="2"
+            fill="currentColor"
+            className="hero-root-node"
+            style={{ animationDelay: `${i * 0.5 + 0.3}s` }}
+          />
+        </g>
+      ))}
+
+      {rootClusters.map((cluster) => (
         <g key={cluster.id}>
           <path
             d={cluster.trunk}
@@ -201,7 +196,7 @@ export function HeroNetwork() {
           <circle r="1.4" fill="currentColor" />
           <animateMotion
             dur={`${light.duration}s`}
-            begin={`${light.begin}s`}
+            begin={`${i * 3}s`}
             repeatCount="indefinite"
           >
             <mpath href={`#${light.path}`} />
