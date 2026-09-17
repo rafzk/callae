@@ -1,9 +1,10 @@
 // A faint brain silhouette across the top of the hero — nested arcs (its
-// folds) split by a central fissure — with root/dendrite clusters trailing
-// down from it into the lower corners, like a brain's roots. A soft ball
-// of light drifts along a few of the paths. Everything stays out of the
-// middle band where the headline sits, and opacity is intentionally very
-// low — this is atmosphere, not a focal point.
+// folds) split by a central fissure — with a small hub at the pyramid mark
+// that sends curved spokes up into the dome and down/out toward the root
+// clusters trailing off the lower corners, like a brain's roots. A soft
+// ball of light drifts along a few of the paths. Everything stays out of
+// the text column, and opacity is intentionally very low — this is
+// atmosphere, not a focal point.
 
 const fissure = "M 720,12 C 716,90 724,180 718,260";
 
@@ -15,6 +16,17 @@ const domeArcs = [
   { d: "M 300,135 A 600,170 0 0 1 1140,135", tip: { l: { x: 300, y: 135 }, r: { x: 1140, y: 135 } } },
   { d: "M 350,100 A 550,145 0 0 1 1090,100", tip: { l: { x: 350, y: 100 }, r: { x: 1090, y: 100 } } },
   { d: "M 400,70 A 500,120 0 0 1 1040,70", tip: { l: { x: 400, y: 70 }, r: { x: 1040, y: 70 } } },
+];
+
+// A hub near the pyramid mark, with spokes curving up into the dome and
+// out/down toward the root clusters — the "coming out from the centre"
+// look, bowing around the text column rather than through it.
+const hub = { x: 720, y: 225 };
+const spokes = [
+  { id: "spoke-ul", d: "M 700,190 C 600,150 480,115 400,72" },
+  { id: "spoke-ur", d: "M 740,190 C 840,150 960,115 1040,72" },
+  { id: "spoke-dl", d: "M 700,255 C 560,335 300,480 150,648" },
+  { id: "spoke-dr", d: "M 740,255 C 880,335 1140,470 1290,632" },
 ];
 
 // Root clusters trailing down from the brain into the lower corners.
@@ -85,8 +97,8 @@ const connectors = [
 ];
 
 const lights = [
-  { path: "dome-1", duration: 19 },
-  { path: "dome-3", duration: 22 },
+  { path: "spoke-ul", duration: 14 },
+  { path: "spoke-dr", duration: 17 },
   { path: "conn-bottom-left", duration: 18 },
   { path: "conn-bottom-right", duration: 21 },
 ];
@@ -143,6 +155,26 @@ export function HeroNetwork() {
           />
         </g>
       ))}
+
+      {spokes.map((spoke, i) => (
+        <path
+          key={spoke.id}
+          id={spoke.id}
+          d={spoke.d}
+          stroke="currentColor"
+          strokeWidth="0.75"
+          fill="none"
+          className="hero-root-line"
+          style={{ animationDelay: `${i * 0.4}s` }}
+        />
+      ))}
+      <circle
+        cx={hub.x}
+        cy={hub.y}
+        r="3"
+        fill="currentColor"
+        className="hero-root-node"
+      />
 
       {rootClusters.map((cluster) => (
         <g key={cluster.id}>
