@@ -1,18 +1,21 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navLinks } from "@/lib/content";
 import { Wordmark } from "./wordmark";
 
-export function SiteHeader() {
+export function SiteHeader({ forceSolid = false }: { forceSolid?: boolean } = {}) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   // The hero is the only dark section and always sits at the top of the
   // page, so "not scrolled yet" reliably means "still over the dark hero" —
   // that's what lets the header go transparent/light there and solid once
-  // past it, without tracking the hero's position separately.
-  const solid = scrolled || open;
+  // past it, without tracking the hero's position separately. Pages with no
+  // dark hero (e.g. the legal pages) pass forceSolid so it never goes
+  // transparent-over-light.
+  const solid = forceSolid || scrolled || open;
 
   useEffect(() => {
     if (!open) return;
@@ -47,8 +50,8 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
-        <a
-          href="#top"
+        <Link
+          href="/#top"
           className={`rounded-sm ${solid ? "" : "text-white"}`}
           onClick={() => setOpen(false)}
           aria-label={`${"CALLAE"} — back to top`}
@@ -57,14 +60,14 @@ export function SiteHeader() {
             underlineClassName={solid ? "bg-blue" : "bg-white/70"}
             animated
           />
-        </a>
+        </Link>
 
         <nav
           aria-label="Primary"
           className="hidden items-center gap-9 md:flex"
         >
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className={`link-underline text-sm font-medium transition-colors ${
@@ -74,16 +77,16 @@ export function SiteHeader() {
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className={`btn-lift inline-flex items-center rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
               solid ? "bg-blue text-paper" : "bg-paper text-blue-deep"
             }`}
           >
             Let&rsquo;s talk
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -127,22 +130,22 @@ export function SiteHeader() {
           className="flex flex-col gap-1 px-6 py-4 sm:px-8"
         >
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
               className="rounded-md px-2 py-3 text-base font-medium text-ink-soft hover:bg-paper-deep hover:text-ink"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             onClick={() => setOpen(false)}
             className="mt-2 inline-flex items-center justify-center rounded-full bg-blue px-5 py-3 text-sm font-medium text-paper"
           >
             Let&rsquo;s talk
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

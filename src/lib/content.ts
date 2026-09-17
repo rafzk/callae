@@ -17,13 +17,74 @@ export const siteConfig = {
   web3FormsAccessKey: "",
 } as const;
 
+// Root-prefixed so these still resolve correctly from pages other than "/"
+// (e.g. the legal pages) — same-document fragment navigation when already
+// on "/", a normal navigation-then-scroll from anywhere else.
 export const navLinks = [
-  { label: "Advisory", href: "#advisory" },
-  { label: "Delivery", href: "#delivery" },
-  { label: "Labs", href: "#labs" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Advisory", href: "/#advisory" },
+  { label: "Delivery", href: "/#delivery" },
+  { label: "Labs", href: "/#labs" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
+
+export type LegalPage = {
+  title: string;
+  href: string;
+  // One line describing the page, used on the sitemap.
+  description: string;
+};
+
+export const legalPages: LegalPage[] = [
+  {
+    title: "Site Terms",
+    href: "/legal/terms",
+    description: "The terms that govern use of this website.",
+  },
+  {
+    title: "Privacy Statement",
+    href: "/legal/privacy",
+    description: "What personal data we collect and how we use it.",
+  },
+  {
+    title: "GDPR",
+    href: "/legal/gdpr",
+    description: "Your rights under the GDPR and how to exercise them.",
+  },
+  {
+    title: "Your Privacy Choices",
+    href: "/legal/privacy-choices",
+    description: "The choices you have over your personal data and marketing.",
+  },
+  {
+    title: "Cookie Policy",
+    href: "/legal/cookies",
+    description: "What cookies this site does — and doesn't — use.",
+  },
+  {
+    title: "Cookie Preferences",
+    href: "/legal/cookie-preferences",
+    description: "Manage cookie categories for this site.",
+  },
+  {
+    title: "Sitemap",
+    href: "/legal/sitemap",
+    description: "Every page on this site, in one place.",
+  },
+];
+
+// CALLAE trades as a sole proprietorship — there is no separate registered
+// company. Fill in taxId before launch; everything else here is accurate.
+export const legalConfig = {
+  entityName: "Rafael Cardoso",
+  tradingAs: "CALLAE",
+  country: "Portugal",
+  taxId: "[NIF — add before launch]",
+  supervisoryAuthority: {
+    name: "Comissão Nacional de Proteção de Dados (CNPD)",
+    url: "https://www.cnpd.pt",
+  },
+} as const;
 
 export type Pillar = {
   id: string;
