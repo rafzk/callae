@@ -9,7 +9,7 @@ export const siteConfig = {
   // Contact details are intentionally configurable in one place rather than
   // hard-coded across the site. Update before launch.
   email: "hello@callae.eu",
-  linkedinUrl: "",
+  linkedinUrl: "https://www.linkedin.com/company/136994117",
   // Web3Forms (https://web3forms.com) access key. Leave empty until you've
   // created one — the contact form detects this and tells visitors honestly
   // that online submission isn't connected yet, instead of pretending to
