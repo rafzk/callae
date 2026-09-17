@@ -1,3 +1,6 @@
+const WORDMARK_LETTERS = "CALLAE".split("");
+const REPLACED_LETTER_INDEX = WORDMARK_LETTERS.indexOf("A");
+
 export function Wordmark({
   className = "",
   underlineClassName = "bg-blue",
@@ -8,11 +11,11 @@ export function Wordmark({
   animated?: boolean;
 }) {
   return (
-    <span className={`inline-flex items-center gap-2 select-none ${className}`}>
+    <span className={`inline-flex items-start gap-2 select-none ${className}`}>
       <svg
         aria-hidden
         viewBox="0 0 18 14"
-        className={`h-[13px] w-[16px] shrink-0 sm:h-[14px] sm:w-[18px] ${
+        className={`relative z-10 h-[13px] w-[16px] shrink-0 sm:h-[14px] sm:w-[18px] ${
           animated ? "wordmark-icon" : ""
         }`}
       >
@@ -22,7 +25,14 @@ export function Wordmark({
       </svg>
       <span className="inline-flex flex-col leading-none">
         <span className="font-sans font-semibold tracking-[0.22em] text-[15px] sm:text-base">
-          CALLAE
+          {WORDMARK_LETTERS.map((letter, i) => (
+            <span
+              key={i}
+              className={animated && i === REPLACED_LETTER_INDEX ? "wordmark-letter-hide" : undefined}
+            >
+              {letter}
+            </span>
+          ))}
         </span>
         <span
           aria-hidden

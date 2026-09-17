@@ -144,6 +144,29 @@ body {
   animation: wordmark-icon-visit 7s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
+/* The first "A" hides while the icon is parked on top of it, so the icon
+   reads as replacing the letter rather than just sitting over it. Timed
+   a touch inside the icon's own hold window (65%-80% above) so the letter
+   is gone before the icon settles and back before it lifts off. */
+@keyframes wordmark-letter-hide {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  66%,
+  79% {
+    opacity: 0;
+  }
+  85%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.wordmark-letter-hide {
+  animation: wordmark-letter-hide 7s ease-in-out infinite;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(22px);
