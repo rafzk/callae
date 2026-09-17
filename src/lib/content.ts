@@ -120,16 +120,18 @@ export const founder = {
 export type ClientLogo = {
   name: string;
   // Optional: a real logo file under public/logos/. Until one's provided,
-  // the client's name renders as a plain text wordmark instead — never a
+  // the name renders as a plain text wordmark instead — never a
   // placeholder image or a guessed/scraped logo.
   logoSrc?: string;
 };
 
-// Real, current clients only. Never add a placeholder or invented company
-// here — the component that reads this renders nothing while it's empty.
+// Names CALLAE wants associated with it in this "trusted by" strip — not
+// necessarily clients or formal partners. Never add a placeholder or
+// invented name here — the component that reads this renders nothing
+// while it's empty.
 export const clientLogos: ClientLogo[] = [
   { name: "Wrangu" },
-  { name: "LambWeston" },
+  { name: "ServiceNow" },
 ];
 
 export type Testimonial = {
