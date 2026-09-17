@@ -37,26 +37,6 @@ export type LegalPage = {
 
 export const legalPages: LegalPage[] = [
   {
-    title: "Site Terms",
-    href: "/legal/terms",
-    description: "The terms that govern use of this website.",
-  },
-  {
-    title: "Privacy Statement",
-    href: "/legal/privacy",
-    description: "What personal data we collect and how we use it.",
-  },
-  {
-    title: "GDPR",
-    href: "/legal/gdpr",
-    description: "Your rights under the GDPR and how to exercise them.",
-  },
-  {
-    title: "Your Privacy Choices",
-    href: "/legal/privacy-choices",
-    description: "The choices you have over your personal data and marketing.",
-  },
-  {
     title: "Cookie Policy",
     href: "/legal/cookies",
     description: "What cookies this site does — and doesn't — use.",
@@ -67,9 +47,29 @@ export const legalPages: LegalPage[] = [
     description: "Manage cookie categories for this site.",
   },
   {
+    title: "GDPR",
+    href: "/legal/gdpr",
+    description: "Your rights under the GDPR and how to exercise them.",
+  },
+  {
+    title: "Privacy Statement",
+    href: "/legal/privacy",
+    description: "What personal data we collect and how we use it.",
+  },
+  {
+    title: "Site Terms",
+    href: "/legal/terms",
+    description: "The terms that govern use of this website.",
+  },
+  {
     title: "Sitemap",
     href: "/legal/sitemap",
     description: "Every page on this site, in one place.",
+  },
+  {
+    title: "Your Privacy Choices",
+    href: "/legal/privacy-choices",
+    description: "The choices you have over your personal data and marketing.",
   },
 ];
 
