@@ -41,7 +41,7 @@ export default function PrivacyPage() {
           address, browser type and request timestamps) needed to serve the
           site securely and reliably. We don&rsquo;t use this data for
           analytics or tracking, and this site doesn&rsquo;t set any
-          analytics or advertising cookies — see our{" "}
+          analytics or advertising cookies. See our{" "}
           <Link href="/legal/cookies" className={link}>
             Cookie Policy
           </Link>
@@ -53,17 +53,17 @@ export default function PrivacyPage() {
       <ul className={ul}>
         <li>
           To respond to enquiries you send us, and to discuss a possible
-          engagement — legal basis: our legitimate interest in responding to
+          engagement (legal basis: our legitimate interest in responding to
           people who contact us, and taking pre-contractual steps at your
-          request.
+          request).
         </li>
         <li>
-          To keep the site secure and working — legal basis: our legitimate
-          interest in the security and reliability of the site.
+          To keep the site secure and working (legal basis: our legitimate
+          interest in the security and reliability of the site).
         </li>
         <li>
-          To meet legal obligations, such as retaining business records —
-          legal basis: legal obligation.
+          To meet legal obligations, such as retaining business records
+          (legal basis: legal obligation).
         </li>
       </ul>
       <p className={p}>
@@ -121,11 +121,11 @@ export default function PrivacyPage() {
       <p className={p}>
         We don&rsquo;t currently run an email newsletter or marketing list.
         If you contact us, we&rsquo;ll only use your details to respond and,
-        where relevant, discuss a possible engagement — never to add you to a
+        where relevant, discuss a possible engagement, never to add you to a
         marketing list without asking first.
       </p>
       <p className={p}>
-        This site doesn&rsquo;t set analytics or advertising cookies — see
+        This site doesn&rsquo;t set analytics or advertising cookies. See
         our{" "}
         <Link href="/legal/cookies" className={link}>
           Cookie Policy

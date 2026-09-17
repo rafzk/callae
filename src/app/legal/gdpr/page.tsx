@@ -31,7 +31,7 @@ export default function GdprPage() {
         {legalConfig.entityName}, trading as {legalConfig.tradingAs}, is the
         data controller for personal data processed through this site. As a
         sole trader, we&rsquo;re not required to appoint a Data Protection
-        Officer — for any data protection matter, contact us directly at{" "}
+        Officer. For any data protection matter, contact us directly at{" "}
         <a href={`mailto:${siteConfig.email}`} className={link}>
           {siteConfig.email}
         </a>
@@ -42,35 +42,35 @@ export default function GdprPage() {
       <p className={p}>You have the right to:</p>
       <ul className={ul}>
         <li>
-          <strong className="font-medium text-ink">Access</strong> — ask for a
+          <strong className="font-medium text-ink">Access:</strong> ask for a
           copy of the personal data we hold about you.
         </li>
         <li>
-          <strong className="font-medium text-ink">Rectification</strong> —
+          <strong className="font-medium text-ink">Rectification:</strong>{" "}
           ask us to correct inaccurate or incomplete data.
         </li>
         <li>
-          <strong className="font-medium text-ink">Erasure</strong> — ask us
+          <strong className="font-medium text-ink">Erasure:</strong> ask us
           to delete your data, where there&rsquo;s no legal reason for us to
           keep it.
         </li>
         <li>
           <strong className="font-medium text-ink">
-            Restriction of processing
+            Restriction of processing:
           </strong>{" "}
-          — ask us to limit how we use your data in certain circumstances.
+          ask us to limit how we use your data in certain circumstances.
         </li>
         <li>
-          <strong className="font-medium text-ink">Data portability</strong> —
+          <strong className="font-medium text-ink">Data portability:</strong>{" "}
           ask for your data in a structured, commonly used format, to move it
           elsewhere.
         </li>
         <li>
-          <strong className="font-medium text-ink">Objection</strong> — object
+          <strong className="font-medium text-ink">Objection:</strong> object
           to us processing your data where we rely on legitimate interest.
         </li>
         <li>
-          <strong className="font-medium text-ink">Withdraw consent</strong> —
+          <strong className="font-medium text-ink">Withdraw consent:</strong>{" "}
           where we rely on your consent for something, withdraw it at any
           time.
         </li>

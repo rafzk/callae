@@ -210,7 +210,7 @@ export function ContactForm() {
         {status === "unconfigured" ? (
           <p className="border border-line bg-paper-deep px-4 py-3 text-ink-soft">
             Online submission isn&rsquo;t connected yet, so this message
-            wouldn&rsquo;t reach us — please email{" "}
+            wouldn&rsquo;t reach us. Please email{" "}
             <a
               href={`mailto:${siteConfig.email}`}
               className="font-medium text-ink underline decoration-line underline-offset-4"
@@ -222,7 +222,7 @@ export function ContactForm() {
         ) : null}
         {status === "success" ? (
           <p className="border border-blue/30 bg-blue-soft px-4 py-3 text-blue-deep">
-            Thanks — your message has been sent. We&rsquo;ll get back to you
+            Thanks. Your message has been sent. We&rsquo;ll get back to you
             shortly.
           </p>
         ) : null}

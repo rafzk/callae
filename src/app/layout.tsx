@@ -19,8 +19,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Governance, ServiceNow & Digital Transformation`,
-    template: `%s — ${siteConfig.name}`,
+    default: `${siteConfig.name} | Governance, ServiceNow & Digital Transformation`,
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
     type: "website",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
     locale: "en_GB",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
   },
 };
