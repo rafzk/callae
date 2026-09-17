@@ -8,7 +8,7 @@ export function ClientLogos() {
   if (clientLogos.length === 0) return null;
 
   return (
-    <section className="border-b border-line bg-paper">
+    <section className="border-b border-line bg-paper-deep">
       <div className="mx-auto max-w-5xl px-6 py-20 text-center sm:px-8 sm:py-24">
         <p className="text-sm font-medium uppercase tracking-[0.18em] text-ink-faint">
           Trusted by
