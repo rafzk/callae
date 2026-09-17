@@ -53,7 +53,10 @@ export function SiteHeader() {
           onClick={() => setOpen(false)}
           aria-label={`${"CALLAE"} — back to top`}
         >
-          <Wordmark underlineClassName={solid ? "bg-blue" : "bg-white/70"} />
+          <Wordmark
+            underlineClassName={solid ? "bg-blue" : "bg-white/70"}
+            animated
+          />
         </a>
 
         <nav
