@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/content";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const alt = `${siteConfig.name} | ${siteConfig.tagline}`;
 
 export default function Image() {
   return new ImageResponse(
@@ -20,36 +21,41 @@ export default function Image() {
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", marginBottom: 28 }}>
-          <div style={{ width: 84, height: 12, backgroundColor: "#F6F3EC" }} />
+        <div style={{ display: "flex", alignItems: "center", marginBottom: 44 }}>
           <div
             style={{
-              width: 60,
-              height: 12,
-              marginLeft: 6,
-              backgroundColor: "#F6F3EC",
-              opacity: 0.6,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              gap: 6,
+              width: 64,
+              height: 50,
+              marginRight: 22,
             }}
-          />
+          >
+            <div style={{ display: "flex", width: 64, height: 10, backgroundColor: "#FFFFFF" }} />
+            <div
+              style={{
+                display: "flex",
+                width: 46,
+                height: 10,
+                backgroundColor: "#FFFFFF",
+                opacity: 0.72,
+              }}
+            />
+            <div style={{ display: "flex", width: 26, height: 10, backgroundColor: "#8AB4F8" }} />
+          </div>
           <div
             style={{
-              width: 36,
-              height: 12,
-              marginLeft: 6,
-              backgroundColor: "#8AB4F8",
+              display: "flex",
+              fontSize: 34,
+              letterSpacing: 10,
+              opacity: 0.92,
             }}
-          />
-        </div>
-        <div
-          style={{
-            display: "flex",
-            fontSize: 30,
-            letterSpacing: 10,
-            opacity: 0.85,
-            marginBottom: 18,
-          }}
-        >
-          CALLAE
+          >
+            CALLAE
+          </div>
         </div>
         <div
           style={{
