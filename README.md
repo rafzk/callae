@@ -59,6 +59,26 @@ validation (labelled errors tied to each field via `aria-describedby`).
 
 ## Deployment
 
-Static-friendly Next.js app — deploys to [Vercel](https://vercel.com/new)
-with zero configuration (framework preset auto-detected). Point the
-`callae.eu` domain at the project once deployed.
+`next.config.ts` sets `output: "export"` — `npm run build` produces a fully
+static `out/` folder (no server, no adapter needed), so the site can be
+hosted anywhere that serves static files.
+
+### Cloudflare Pages (recommended — cheaper for a low-traffic site)
+
+Cloudflare Pages' free tier has no commercial-use restriction and unlimited
+bandwidth, unlike Vercel's free Hobby tier.
+
+1. Connect the repo in the Cloudflare dashboard (Workers & Pages → Create →
+   Pages), or deploy from the CLI with `npx wrangler pages deploy out`.
+2. Build settings: build command `npm run build`, output directory `out`.
+3. Point the `callae.eu` domain at the Pages project once deployed.
+
+`public/_headers` sets explicit `Content-Type` headers for the extensionless
+icon/OG-image routes Next.js generates (`/apple-icon`, `/opengraph-image`,
+`/logo.png`) — Cloudflare Pages reads this file automatically.
+
+### Vercel (alternative)
+
+Also deploys with zero configuration (framework preset auto-detected) via
+[vercel.com/new](https://vercel.com/new). Note the Hobby tier is for
+non-commercial use — a business site like this one needs a paid Pro plan.
