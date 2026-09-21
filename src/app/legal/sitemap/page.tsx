@@ -37,7 +37,7 @@ export default function SitemapPage() {
       </ul>
 
       <h2 className={h2}>Legal</h2>
-      <ul className="space-y-2">
+      <ul className="mb-4 space-y-2">
         {legalPages.map((page) => (
           <li key={page.href}>
             <Link href={page.href} className={link}>
@@ -48,6 +48,19 @@ export default function SitemapPage() {
             </span>
           </li>
         ))}
+      </ul>
+
+      <h2 className={h2}>For AI agents</h2>
+      <ul className="space-y-2">
+        <li>
+          <a href="/llms.txt" className={link}>
+            llms.txt
+          </a>
+          <span className="block text-sm text-ink-faint">
+            A plain-text summary of {siteConfig.name} for AI assistants and
+            language models.
+          </span>
+        </li>
       </ul>
     </>
   );
