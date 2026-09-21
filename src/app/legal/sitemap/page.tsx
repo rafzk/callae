@@ -3,11 +3,13 @@ import Link from "next/link";
 import { LegalPageHeader } from "@/components/legal-page-header";
 import { legalPages, siteConfig } from "@/lib/content";
 import { legalProse } from "@/lib/legal-prose";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Sitemap",
   description: `Every page on the ${siteConfig.name} website, in one place.`,
-};
+  path: "/legal/sitemap",
+});
 
 const { h2, link } = legalProse;
 

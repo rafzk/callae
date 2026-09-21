@@ -3,11 +3,13 @@ import Link from "next/link";
 import { LegalPageHeader } from "@/components/legal-page-header";
 import { legalConfig, siteConfig } from "@/lib/content";
 import { legalProse } from "@/lib/legal-prose";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "GDPR",
   description: `Your rights under the GDPR and how ${siteConfig.name} handles them.`,
-};
+  path: "/legal/gdpr",
+});
 
 const { h2, p, ul, link } = legalProse;
 

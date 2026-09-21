@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { LegalPageHeader } from "@/components/legal-page-header";
 import { legalConfig, siteConfig } from "@/lib/content";
 import { legalProse } from "@/lib/legal-prose";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Site Terms",
   description: `The terms that govern use of the ${siteConfig.name} website.`,
-};
+  path: "/legal/terms",
+});
 
 const { h2, p, link } = legalProse;
 
